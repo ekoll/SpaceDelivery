@@ -11,7 +11,7 @@ import XCTest
 class SpaceshipBlueprintInitializationTests: XCTestCase {
 
     // MARK: - init
-    func testAbilityPointsDistributedEqually() throws {
+    func test_ability_points_distributed_equally() throws {
         let blueprint = SpaceShipBlueprint(maxAbilityPoints: 15)
         let expectedAbilityPoints = 5
         
@@ -20,7 +20,7 @@ class SpaceshipBlueprintInitializationTests: XCTestCase {
         XCTAssertEqual(blueprint.capacity, expectedAbilityPoints)
     }
     
-    func testAbilityPointsDistributedEquallyWhenThereIsArbitrartyPoint() throws {
+    func test_ability_points_distributed_equally_when_there_is_arbitrarty_point() throws {
         let blueprint = SpaceShipBlueprint(maxAbilityPoints: 16)
         let expectedDurability = 6
         let expectedSpeed = 5
@@ -31,7 +31,7 @@ class SpaceshipBlueprintInitializationTests: XCTestCase {
         XCTAssertEqual(blueprint.capacity, expectedCapacity)
     }
     
-    func testAbilityPointsDistributedEquallyWhenThereAreTwoArbitrartyPoints() throws {
+    func test_ability_points_distributed_equally_when_there_are_2_arbitrarty_points() throws {
         let blueprint = SpaceShipBlueprint(maxAbilityPoints: 17)
         let expectedDurability = 6
         let expectedSpeed = 6
@@ -149,5 +149,27 @@ class SpaceshipBlueprintFunctionTests: XCTestCase {
         blueprint.increaseCapacity()
         
         XCTAssertEqual(blueprint.capacity, expectedResult)
+    }
+    
+    func test_when_name_empty_validation_returns_error() throws {
+        let bluePrint = SpaceShipBlueprint(name: "")
+        
+        XCTAssertThrowsError(try bluePrint.validate(), "Spaceship does not have a name. Validation must return error.", { error in
+            XCTAssertEqual(error as? SpaceShipBlueprint.ValidationError, SpaceShipBlueprint.ValidationError.emptyName)
+        })
+    }
+    
+    func test_when_there_is_arbitrary_points_validation_returns_error() throws {
+        let bluePrint = try SpaceShipBlueprint(name: "a valid name", maxAbilityPoints: 10, durability: 3, speed: 2, capacity: 4)
+        
+        XCTAssertThrowsError(try bluePrint.validate(), "Spaceship does not have a name. Validation must return error.", { error in
+            XCTAssertEqual(error as? SpaceShipBlueprint.ValidationError, SpaceShipBlueprint.ValidationError.unusedPoints)
+        })
+    }
+    
+    func test_valid_blueprint() throws {
+        let bluePrint = try SpaceShipBlueprint(name: "a valid name", maxAbilityPoints: 10, durability: 3, speed: 2, capacity: 5)
+        
+        XCTAssertNoThrow(try bluePrint.validate())
     }
 }

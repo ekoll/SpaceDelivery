@@ -72,4 +72,24 @@ public class SpaceShipBlueprint {
     func decreaseCapacity() {
         capacity = max(capacity - 1, 0)
     }
+    
+    func validate() throws {
+        if name.isEmpty {
+            throw ValidationError.emptyName
+        }
+        
+        if durability + speed + capacity < maxAbilityPoints {
+            throw ValidationError.unusedPoints
+        }
+    }
+}
+
+extension SpaceShipBlueprint {
+    enum ValidationError: String, AppError, CustomStringConvertible {
+        case unusedPoints = "There are unused stat points to upgrade ship"
+        case emptyName = "This ship does not have a name"
+        
+        public var message: String { rawValue }
+        public var description: String { rawValue }
+    }
 }
