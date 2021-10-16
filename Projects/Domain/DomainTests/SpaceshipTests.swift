@@ -75,4 +75,38 @@ class SpaceshipTests: XCTestCase {
         let expectedHealth = 0
         XCTAssertEqual(spaceship.currentHealth, expectedHealth)
     }
+    
+    // MARK: take from stock
+    func test_take_stock_decrease_currentStock() {
+        var spaceship = Spaceship(capacity: 100)
+        _ = spaceship.takeFromStock(40)
+        
+        let expedtedResult = spaceship.capacity - 40
+        XCTAssertEqual(spaceship.currentStock, expedtedResult)
+    }
+    
+    func test_take_stock_returns_correct_stock() {
+        let expedtedResult = Int64(40)
+        
+        var spaceship = Spaceship(capacity: 100)
+        let stock = spaceship.takeFromStock(expedtedResult)
+        
+        XCTAssertEqual(stock, expedtedResult)
+    }
+    
+    func test_take_more_stock_than_currentStock_returns_currentStock() {
+        var spaceship = Spaceship(capacity: 10)
+        let expedtedResult = spaceship.currentStock
+        let stock = spaceship.takeFromStock(40)
+        
+        XCTAssertEqual(stock, expedtedResult)
+    }
+    
+    func test_take_more_stock_than_currentStock_set_currentStock_to_0() {
+        var spaceship = Spaceship(capacity: 10)
+        _ = spaceship.takeFromStock(40)
+        
+        let expedtedResult = Int64(0)
+        XCTAssertEqual(spaceship.currentStock, expedtedResult)
+    }
 }

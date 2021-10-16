@@ -54,6 +54,13 @@ public struct Spaceship {
         return true
     }
     
+    internal mutating func takeFromStock(_ amount: Int64) -> Int64 {
+        let stock = min(amount, currentStock)
+        currentStock -= stock
+        
+        return stock
+    }
+    
     internal var isShipOK: Bool {
         currentUST > 0
         && currentStock > 0
