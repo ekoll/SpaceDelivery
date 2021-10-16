@@ -6,12 +6,18 @@
 //
 
 public struct SpaceStation {
-    public var name: String = ""
-    public var coordinate: Coordinate = .zero
-    public var capacity: Int64 = 0
-    public var stock: Int64 = 0
-    public var need: Int64 = 0
-    public var isFavorite: Bool = false
+    private(set) public var name: String = ""
+    private(set) public var coordinate: Coordinate = .zero
+    private(set) public var capacity: Int64 = 0
+    private(set) public var stock: Int64 = 0
+    private(set) public var need: Int64 = 0
+    internal(set) public var isFavorite: Bool = false
+    
+    internal mutating func add(stock: Int64) {
+        let stockToAdd = min(stock, need, capacity - self.stock)
+        need -= stockToAdd
+        self.stock += stockToAdd
+    }
 }
 
 extension SpaceStation: Equatable {

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class SpaceShipBlueprint {
+public class SpaceshipBlueprint {
     public let maxAbilityPoints: Int
     public var name: String
     private(set) public var durability: Int
@@ -84,7 +84,7 @@ public class SpaceShipBlueprint {
     }
 }
 
-extension SpaceShipBlueprint {
+extension SpaceshipBlueprint {
     enum ValidationError: String, AppError, CustomStringConvertible {
         case unusedPoints = "There are unused stat points to upgrade ship"
         case emptyName = "This ship does not have a name"
