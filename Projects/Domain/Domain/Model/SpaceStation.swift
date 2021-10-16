@@ -12,3 +12,9 @@ public struct SpaceStation {
     public var stock: Int64
     public var need: Int64
 }
+
+extension SpaceStation: Equatable {
+    public static func == (lhs: SpaceStation, rhs: SpaceStation) -> Bool {
+        lhs.name == rhs.name
+    }
+}

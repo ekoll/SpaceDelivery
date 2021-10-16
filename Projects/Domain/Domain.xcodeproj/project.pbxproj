@@ -30,6 +30,15 @@
 		7FC20D00271B0DFE007D267E /* AppResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CFE271B0DFE007D267E /* AppResult.swift */; };
 		7FC20D08271B182E007D267E /* SpaceStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D07271B182E007D267E /* SpaceStation.swift */; };
 		7FC20D09271B182E007D267E /* SpaceStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D07271B182E007D267E /* SpaceStation.swift */; };
+		7FC20D0B271B1976007D267E /* LoadStationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D0A271B1976007D267E /* LoadStationUseCase.swift */; };
+		7FC20D0C271B1976007D267E /* LoadStationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D0A271B1976007D267E /* LoadStationUseCase.swift */; };
+		7FC20D0F271B1A03007D267E /* StationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D0E271B1A03007D267E /* StationRepository.swift */; };
+		7FC20D10271B1A03007D267E /* StationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D0E271B1A03007D267E /* StationRepository.swift */; };
+		7FC20D12271B1A32007D267E /* StationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D11271B1A32007D267E /* StationLoader.swift */; };
+		7FC20D13271B1A32007D267E /* StationLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D11271B1A32007D267E /* StationLoader.swift */; };
+		7FC20D16271B1AC4007D267E /* FakeStationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D15271B1AC4007D267E /* FakeStationRepository.swift */; };
+		7FC20D18271B1BB7007D267E /* StationLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D17271B1BB7007D267E /* StationLoaderTests.swift */; };
+		7FC20D1A271B1D37007D267E /* FakeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D19271B1D37007D267E /* FakeError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +67,12 @@
 		7FC20CFB271B0D5C007D267E /* Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
 		7FC20CFE271B0DFE007D267E /* AppResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResult.swift; sourceTree = "<group>"; };
 		7FC20D07271B182E007D267E /* SpaceStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceStation.swift; sourceTree = "<group>"; };
+		7FC20D0A271B1976007D267E /* LoadStationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadStationUseCase.swift; sourceTree = "<group>"; };
+		7FC20D0E271B1A03007D267E /* StationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRepository.swift; sourceTree = "<group>"; };
+		7FC20D11271B1A32007D267E /* StationLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationLoader.swift; sourceTree = "<group>"; };
+		7FC20D15271B1AC4007D267E /* FakeStationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeStationRepository.swift; sourceTree = "<group>"; };
+		7FC20D17271B1BB7007D267E /* StationLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationLoaderTests.swift; sourceTree = "<group>"; };
+		7FC20D19271B1D37007D267E /* FakeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +127,10 @@
 		7FC20CC6271AD837007D267E /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
+				7FC20D14271B1AAD007D267E /* Fakes */,
 				7FC20CC7271AD837007D267E /* SpaceshipBlueprintTests.swift */,
 				7FC20CF1271AFF93007D267E /* SpaceshipTechnicianTests.swift */,
+				7FC20D17271B1BB7007D267E /* StationLoaderTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -141,6 +158,7 @@
 		7FC20CE9271AFEB8007D267E /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				7FC20D0D271B1999007D267E /* StationLoader */,
 				7FC20CEA271AFEC5007D267E /* SpaceshipBuilding */,
 			);
 			path = UseCase;
@@ -170,6 +188,25 @@
 				7FC20CDC271AF37C007D267E /* AppError.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		7FC20D0D271B1999007D267E /* StationLoader */ = {
+			isa = PBXGroup;
+			children = (
+				7FC20D0A271B1976007D267E /* LoadStationUseCase.swift */,
+				7FC20D11271B1A32007D267E /* StationLoader.swift */,
+				7FC20D0E271B1A03007D267E /* StationRepository.swift */,
+			);
+			path = StationLoader;
+			sourceTree = "<group>";
+		};
+		7FC20D14271B1AAD007D267E /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				7FC20D15271B1AC4007D267E /* FakeStationRepository.swift */,
+				7FC20D19271B1D37007D267E /* FakeError.swift */,
+			);
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,13 +318,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC20D12271B1A32007D267E /* StationLoader.swift in Sources */,
 				7FC20CD3271AD8F3007D267E /* SpaceshipBlueprint.swift in Sources */,
 				7FC20CE7271AFCEF007D267E /* Coordinate.swift in Sources */,
 				7FC20CFF271B0DFE007D267E /* AppResult.swift in Sources */,
 				7FC20CEF271AFF38007D267E /* SpaceshipTechnician.swift in Sources */,
 				7FC20CBD271AD837007D267E /* Domain.docc in Sources */,
+				7FC20D0B271B1976007D267E /* LoadStationUseCase.swift in Sources */,
 				7FC20CE4271AFCC7007D267E /* Spaceship.swift in Sources */,
 				7FC20CDD271AF37C007D267E /* AppError.swift in Sources */,
+				7FC20D0F271B1A03007D267E /* StationRepository.swift in Sources */,
 				7FC20D08271B182E007D267E /* SpaceStation.swift in Sources */,
 				7FC20CFC271B0D5C007D267E /* Definitions.swift in Sources */,
 				7FC20CEC271AFEE7007D267E /* BuildSpaceshipUseCase.swift in Sources */,
@@ -303,12 +343,18 @@
 				7FC20CF2271AFF93007D267E /* SpaceshipTechnicianTests.swift in Sources */,
 				7FC20CF0271AFF38007D267E /* SpaceshipTechnician.swift in Sources */,
 				7FC20CFD271B0D5C007D267E /* Definitions.swift in Sources */,
+				7FC20D1A271B1D37007D267E /* FakeError.swift in Sources */,
+				7FC20D13271B1A32007D267E /* StationLoader.swift in Sources */,
 				7FC20CC8271AD837007D267E /* SpaceshipBlueprintTests.swift in Sources */,
 				7FC20D09271B182E007D267E /* SpaceStation.swift in Sources */,
 				7FC20CE5271AFCC7007D267E /* Spaceship.swift in Sources */,
 				7FC20CDE271AF998007D267E /* AppError.swift in Sources */,
+				7FC20D16271B1AC4007D267E /* FakeStationRepository.swift in Sources */,
 				7FC20D00271B0DFE007D267E /* AppResult.swift in Sources */,
 				7FC20CED271AFEE7007D267E /* BuildSpaceshipUseCase.swift in Sources */,
+				7FC20D10271B1A03007D267E /* StationRepository.swift in Sources */,
+				7FC20D0C271B1976007D267E /* LoadStationUseCase.swift in Sources */,
+				7FC20D18271B1BB7007D267E /* StationLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
