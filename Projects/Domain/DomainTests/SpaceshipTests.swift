@@ -27,26 +27,24 @@ class SpaceshipTests: XCTestCase {
     }
     
     // MARK: is OK
-    func test_is_ship_ok_true_when_all_values_positive() {
+    func test_is_ship_ok_good_when_all_values_positive() {
         let spaceship = Spaceship(capacity: 10000, universalSpaceTime: 500, maxHealth: 100, coordinate: .zero)
-        XCTAssertTrue(spaceship.isShipOK)
+        XCTAssertEqual(spaceship.isShipOK, .good)
     }
     
-    func test_is_ship_ok_false_when_UST_negative() {
-        var spaceship = Spaceship(universalSpaceTime: 4, coordinate: .zero)
-        spaceship.move(to: .init(x: 3, y: 4))
-        
-        XCTAssertFalse(spaceship.isShipOK)
+    func test_is_ship_ok_timeIsUp_when_UST_zero() {
+        let spaceship = Spaceship(capacity: 0, universalSpaceTime: 0, maxHealth: 10, coordinate: .zero)
+        XCTAssertEqual(spaceship.isShipOK, .timeIsUp)
     }
     
-    func test_is_ship_ok_false_when_health_zero() {
-        let spaceship = Spaceship(maxHealth: 0, coordinate: .zero)
-        XCTAssertFalse(spaceship.isShipOK)
+    func test_is_ship_ok_broken_when_health_zero() {
+        let spaceship = Spaceship(capacity: 10, universalSpaceTime: 10, maxHealth: 0, coordinate: .zero)
+        XCTAssertEqual(spaceship.isShipOK, .broken)
     }
     
-    func test_is_ship_ok_false_when_stock_zero() {
-        let spaceship = Spaceship(capacity: 0, coordinate: .zero)
-        XCTAssertFalse(spaceship.isShipOK)
+    func test_is_ship_ok_noStock_when_stock_zero() {
+        let spaceship = Spaceship(capacity: 0, universalSpaceTime: 10, maxHealth: 10, coordinate: .zero)
+        XCTAssertEqual(spaceship.isShipOK, .noStock)
     }
     
     // MARK: do damage

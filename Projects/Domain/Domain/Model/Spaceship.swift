@@ -61,9 +61,26 @@ public struct Spaceship {
         return stock
     }
     
-    internal var isShipOK: Bool {
-        currentUST > 0
-        && currentStock > 0
-        && currentHealth > 0
+    internal var isShipOK: Status {
+        if currentUST <= 0 {
+            return .timeIsUp
+        }
+        if currentHealth <= 0 {
+            return .broken
+        }
+        if currentStock <= 0 {
+            return .noStock
+        }
+        
+        return .good
+    }
+}
+
+extension Spaceship {
+    public enum Status {
+        case good
+        case timeIsUp
+        case noStock
+        case broken
     }
 }
