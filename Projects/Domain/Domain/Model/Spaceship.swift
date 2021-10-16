@@ -11,8 +11,8 @@ public struct Spaceship {
     public var name: String = ""
     public var capacity: Int = 0
     public var universalSpaceTime: Int = 0
-    public var durabilityTime: Int64 = 0
-    public var maxHealth: Int = 0
+    public var durabilityTime: TimeInterval = 0
+    public var maxHealth: Int = 100
     
     public var coordinate: Coordinate = .zero
 }
