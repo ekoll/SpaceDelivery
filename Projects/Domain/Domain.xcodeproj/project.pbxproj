@@ -15,6 +15,8 @@
 		7FC20CD4271AD8F3007D267E /* SpaceshipBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CD2271AD8F3007D267E /* SpaceshipBlueprint.swift */; };
 		7FC20CDD271AF37C007D267E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CDC271AF37C007D267E /* AppError.swift */; };
 		7FC20CDE271AF998007D267E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CDC271AF37C007D267E /* AppError.swift */; };
+		7FC20CE4271AFCC7007D267E /* Spaceship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CE3271AFCC7007D267E /* Spaceship.swift */; };
+		7FC20CE5271AFCC7007D267E /* Spaceship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CE3271AFCC7007D267E /* Spaceship.swift */; };
 		7FC20CE7271AFCEF007D267E /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CE6271AFCEF007D267E /* Coordinate.swift */; };
 		7FC20CE8271AFCEF007D267E /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CE6271AFCEF007D267E /* Coordinate.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +39,7 @@
 		7FC20CC7271AD837007D267E /* SpaceshipBlueprintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipBlueprintTests.swift; sourceTree = "<group>"; };
 		7FC20CD2271AD8F3007D267E /* SpaceshipBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipBlueprint.swift; sourceTree = "<group>"; };
 		7FC20CDC271AF37C007D267E /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		7FC20CE3271AFCC7007D267E /* Spaceship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaceship.swift; sourceTree = "<group>"; };
 		7FC20CE6271AFCEF007D267E /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				7FC20CD2271AD8F3007D267E /* SpaceshipBlueprint.swift */,
+				7FC20CE3271AFCC7007D267E /* Spaceship.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +237,7 @@
 				7FC20CD3271AD8F3007D267E /* SpaceshipBlueprint.swift in Sources */,
 				7FC20CE7271AFCEF007D267E /* Coordinate.swift in Sources */,
 				7FC20CBD271AD837007D267E /* Domain.docc in Sources */,
+				7FC20CE4271AFCC7007D267E /* Spaceship.swift in Sources */,
 				7FC20CDD271AF37C007D267E /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,6 +249,7 @@
 				7FC20CD4271AD8F3007D267E /* SpaceshipBlueprint.swift in Sources */,
 				7FC20CE8271AFCEF007D267E /* Coordinate.swift in Sources */,
 				7FC20CC8271AD837007D267E /* SpaceshipBlueprintTests.swift in Sources */,
+				7FC20CE5271AFCC7007D267E /* Spaceship.swift in Sources */,
 				7FC20CDE271AF998007D267E /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
