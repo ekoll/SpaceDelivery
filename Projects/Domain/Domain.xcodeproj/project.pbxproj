@@ -52,6 +52,7 @@
 		7FC20D37271B530F007D267E /* SpaceshipTechnician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D35271B530F007D267E /* SpaceshipTechnician.swift */; };
 		7FC20D39271B533C007D267E /* BuildSpaceshipUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D38271B533C007D267E /* BuildSpaceshipUseCase.swift */; };
 		7FC20D3A271B533C007D267E /* BuildSpaceshipUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D38271B533C007D267E /* BuildSpaceshipUseCase.swift */; };
+		7FC6A1AE271B599300FB0A60 /* SpaceshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6A1AD271B599300FB0A60 /* SpaceshipTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		7FC20D32271B5251007D267E /* SpaceshipCraftingRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipCraftingRules.swift; sourceTree = "<group>"; };
 		7FC20D35271B530F007D267E /* SpaceshipTechnician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipTechnician.swift; sourceTree = "<group>"; };
 		7FC20D38271B533C007D267E /* BuildSpaceshipUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSpaceshipUseCase.swift; sourceTree = "<group>"; };
+		7FC6A1AD271B599300FB0A60 /* SpaceshipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				7FC20D17271B1BB7007D267E /* StationLoaderTests.swift */,
 				7FC20D21271B223D007D267E /* SpaceTests.swift */,
 				7FC20D24271B3487007D267E /* CoordinateTests.swift */,
+				7FC6A1AD271B599300FB0A60 /* SpaceshipTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				7FC20D1A271B1D37007D267E /* FakeError.swift in Sources */,
 				7FC20D34271B5251007D267E /* SpaceshipCraftingRules.swift in Sources */,
 				7FC20D13271B1A32007D267E /* StationLoader.swift in Sources */,
+				7FC6A1AE271B599300FB0A60 /* SpaceshipTests.swift in Sources */,
 				7FC20CC8271AD837007D267E /* SpaceshipBlueprintTests.swift in Sources */,
 				7FC20D1D271B1F1C007D267E /* SpaceInteractor.swift in Sources */,
 				7FC20D2E271B39C7007D267E /* FavoriteStation.swift in Sources */,

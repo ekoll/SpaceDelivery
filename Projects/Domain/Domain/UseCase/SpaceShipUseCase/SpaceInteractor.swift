@@ -15,7 +15,8 @@ public class SpaceInteractor {
         }
         
         var updatedShip = ship
-        updatedShip.coordinate = station.coordinate
+        updatedShip.move(to: station.coordinate)
+        
         return updatedShip
     }
 }

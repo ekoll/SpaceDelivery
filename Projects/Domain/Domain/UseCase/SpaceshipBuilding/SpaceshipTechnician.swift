@@ -19,7 +19,7 @@ public class SpaceshipTechnician: BuildSpaceshipUseCase {
         
         return .init(
             name: blueprint.name,
-            capacity: blueprint.capacity * rules.capacityMultiplier,
+            capacity: Int64(blueprint.capacity) * rules.capacityMultiplier,
             universalSpaceTime: blueprint.speed * rules.universalSpaceTimeMultiplier,
             durabilityTime: TimeInterval(blueprint.durability) * rules.durabilityTimeMultiplier,
             maxHealth: rules.maxHealth,

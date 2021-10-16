@@ -53,7 +53,7 @@ class SpaceshipTechnicianTests: XCTestCase {
     }
     
     func test_spaceship_capacity() throws {
-        let expectedCapacity = 5 * 10000
+        let expectedCapacity: Int64 = 5 * 10000
         let blueprint = try SpaceshipBlueprint(name: "a_valid_name", maxAbilityPoints: 5, capacity: 5)
         let rules = SpaceshipCraftingRules(capacityMultiplier: 10000)
         let technician = SpaceshipTechnician(rules: rules)
