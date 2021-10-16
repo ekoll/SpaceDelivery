@@ -13,7 +13,7 @@ struct FakeStationRepository: StationRepository {
     }
 }
 
-struct FakeFavouriteStationRepository: FavouriteStationRepository {
+struct FakeFavoriteStationRepository: FavouriteStationRepository {
     var stationsResult: AppResult<[FavouriteStation]> = .succes([])
     var appendStation: (FavouriteStation) -> AppError? = { _ in nil }
     var removeStation: (FavouriteStation) -> AppError? = { _ in nil }

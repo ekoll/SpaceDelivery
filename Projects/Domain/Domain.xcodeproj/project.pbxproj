@@ -45,10 +45,10 @@
 		7FC20D25271B3487007D267E /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D24271B3487007D267E /* CoordinateTests.swift */; };
 		7FC20D27271B35E6007D267E /* FavouriteStationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D26271B35E6007D267E /* FavouriteStationRepository.swift */; };
 		7FC20D29271B3639007D267E /* FavouriteStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D28271B3639007D267E /* FavouriteStation.swift */; };
-		7FC20D2C271B38B7007D267E /* FavouriteStationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D2B271B38B7007D267E /* FavouriteStationUseCase.swift */; };
+		7FC20D2C271B38B7007D267E /* FavoriteStationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D2B271B38B7007D267E /* FavoriteStationUseCase.swift */; };
 		7FC20D2D271B39B8007D267E /* FavouriteStationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D26271B35E6007D267E /* FavouriteStationRepository.swift */; };
 		7FC20D2E271B39C7007D267E /* FavouriteStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D28271B3639007D267E /* FavouriteStation.swift */; };
-		7FC20D2F271B39DB007D267E /* FavouriteStationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D2B271B38B7007D267E /* FavouriteStationUseCase.swift */; };
+		7FC20D2F271B39DB007D267E /* FavoriteStationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D2B271B38B7007D267E /* FavoriteStationUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +88,7 @@
 		7FC20D24271B3487007D267E /* CoordinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTests.swift; sourceTree = "<group>"; };
 		7FC20D26271B35E6007D267E /* FavouriteStationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteStationRepository.swift; sourceTree = "<group>"; };
 		7FC20D28271B3639007D267E /* FavouriteStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteStation.swift; sourceTree = "<group>"; };
-		7FC20D2B271B38B7007D267E /* FavouriteStationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteStationUseCase.swift; sourceTree = "<group>"; };
+		7FC20D2B271B38B7007D267E /* FavoriteStationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStationUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,7 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				7FC20D0A271B1976007D267E /* LoadStationUseCase.swift */,
-				7FC20D2B271B38B7007D267E /* FavouriteStationUseCase.swift */,
+				7FC20D2B271B38B7007D267E /* FavoriteStationUseCase.swift */,
 				7FC20D11271B1A32007D267E /* StationLoader.swift */,
 				7FC20D0E271B1A03007D267E /* StationRepository.swift */,
 				7FC20D26271B35E6007D267E /* FavouriteStationRepository.swift */,
@@ -363,7 +363,7 @@
 				7FC20D0F271B1A03007D267E /* StationRepository.swift in Sources */,
 				7FC20D08271B182E007D267E /* SpaceStation.swift in Sources */,
 				7FC20CFC271B0D5C007D267E /* Definitions.swift in Sources */,
-				7FC20D2C271B38B7007D267E /* FavouriteStationUseCase.swift in Sources */,
+				7FC20D2C271B38B7007D267E /* FavoriteStationUseCase.swift in Sources */,
 				7FC20CEC271AFEE7007D267E /* BuildSpaceshipUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +378,7 @@
 				7FC20D25271B3487007D267E /* CoordinateTests.swift in Sources */,
 				7FC20CF0271AFF38007D267E /* SpaceshipTechnician.swift in Sources */,
 				7FC20CFD271B0D5C007D267E /* Definitions.swift in Sources */,
-				7FC20D2F271B39DB007D267E /* FavouriteStationUseCase.swift in Sources */,
+				7FC20D2F271B39DB007D267E /* FavoriteStationUseCase.swift in Sources */,
 				7FC20D1A271B1D37007D267E /* FakeError.swift in Sources */,
 				7FC20D13271B1A32007D267E /* StationLoader.swift in Sources */,
 				7FC20CC8271AD837007D267E /* SpaceshipBlueprintTests.swift in Sources */,

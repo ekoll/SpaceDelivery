@@ -22,17 +22,47 @@ extension StationLoader: LoadStationUseCase {
     }
 }
  
-extension StationLoader: FavouriteStationUseCase {
+extension StationLoader: FavoriteStationUseCase {
     
-    public func loadFavouriteStations(completion: @escaping QueryCompletion<[FavouriteStation]>) {
+    public func loadFavoriteStations(completion: @escaping QueryCompletion<[FavouriteStation]>) {
         favouriteRepository.loadStations(completion: completion)
     }
     
-    public func append(favouriteStation: FavouriteStation, completion: @escaping CommandCompletion) {
-        favouriteRepository.append(station: favouriteStation, completion: completion)
+    public func appendStationToFavorites(_ station: SpaceStation, completion: @escaping QueryCompletion<SpaceStation>) {
+        guard !station.isFavourite else {
+            completion(.succes(station))
+            return
+        }
+        
+        favouriteRepository.append(station: .init(name: station.name, coordinate: station.coordinate)) { error in
+            switch error {
+            case .none:
+                var updatedStation = station
+                updatedStation.isFavourite = true
+                
+                completion(.succes(updatedStation))
+            case .some(let error):
+                completion(.error(error))
+            }
+        }
     }
-    
-    public func remove(favouriteStation: FavouriteStation, completion: @escaping CommandCompletion) {
-        favouriteRepository.remove(station: favouriteStation, completion: completion)
+
+    public func removeStationFromFavorites(_ station: SpaceStation, completion: @escaping QueryCompletion<SpaceStation>) {
+        guard station.isFavourite else {
+            completion(.succes(station))
+            return
+        }
+        
+        favouriteRepository.remove(station: .init(name: station.name, coordinate: station.coordinate)) { error in
+            switch error {
+            case .none:
+                var updatedStation = station
+                updatedStation.isFavourite = false
+                
+                completion(.succes(updatedStation))
+            case .some(let error):
+                completion(.error(error))
+            }
+        }
     }
 }
