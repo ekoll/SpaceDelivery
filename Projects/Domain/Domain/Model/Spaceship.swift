@@ -8,11 +8,11 @@
 import Foundation
 
 public struct Spaceship {
-    public var name: String
-    public var capacity: Int
-    public var universalSpaceTime: Int
-    public var durabilityTime: Int64
-    public var maxHealth: Int
+    public var name: String = ""
+    public var capacity: Int = 0
+    public var universalSpaceTime: Int = 0
+    public var durabilityTime: Int64 = 0
+    public var maxHealth: Int = 0
     
-    public var coordinate: Coordinate
+    public var coordinate: Coordinate = .zero
 }

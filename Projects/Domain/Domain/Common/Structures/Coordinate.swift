@@ -6,6 +6,8 @@
 //
 
 public struct Coordinate: Equatable {
-    var x: Int
-    var y: Int
+    public static var zero: Coordinate { .init(x: 0, y: 0) }
+    
+    public var x: Int
+    public var y: Int
 }
