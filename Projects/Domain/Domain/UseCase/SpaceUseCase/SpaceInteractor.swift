@@ -7,7 +7,12 @@
 
 import Foundation
 
-public class SpaceInteractor {
+public class SpaceInteractor: SpaceUseCase {
+    private let damageByTime: Int
+    
+    public init(damageByTime: Int = 10) {
+        self.damageByTime = damageByTime
+    }
     
     public func move(ship: Spaceship, to station: SpaceStation) throws -> Spaceship {
         guard ship.coordinate != station.coordinate else {
@@ -32,6 +37,15 @@ public class SpaceInteractor {
         updatedStation.add(stock: stockToDeliver)
         
         return (updatedShip, updatedStation)
+    }
+    
+    public func tryToDamage(ship: Spaceship) -> Spaceship {
+        var updatedShip = ship
+        guard updatedShip.doDamage(damageByTime) else {
+            return ship
+        }
+        
+        return updatedShip
     }
 }
 

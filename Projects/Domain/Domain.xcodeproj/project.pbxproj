@@ -45,7 +45,7 @@
 		7FC20D2D271B39B8007D267E /* FavoriteStationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D26271B35E6007D267E /* FavoriteStationRepository.swift */; };
 		7FC20D2E271B39C7007D267E /* FavoriteStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D28271B3639007D267E /* FavoriteStation.swift */; };
 		7FC20D2F271B39DB007D267E /* FavoriteStationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D2B271B38B7007D267E /* FavoriteStationUseCase.swift */; };
-		7FC20D31271B4561007D267E /* SpaceShipUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D30271B4561007D267E /* SpaceShipUseCase.swift */; };
+		7FC20D31271B4561007D267E /* SpaceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D30271B4561007D267E /* SpaceUseCase.swift */; };
 		7FC20D33271B5251007D267E /* SpaceshipCraftingRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D32271B5251007D267E /* SpaceshipCraftingRules.swift */; };
 		7FC20D34271B5251007D267E /* SpaceshipCraftingRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D32271B5251007D267E /* SpaceshipCraftingRules.swift */; };
 		7FC20D36271B530F007D267E /* SpaceshipTechnician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D35271B530F007D267E /* SpaceshipTechnician.swift */; };
@@ -54,6 +54,7 @@
 		7FC20D3A271B533C007D267E /* BuildSpaceshipUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D38271B533C007D267E /* BuildSpaceshipUseCase.swift */; };
 		7FC6A1AE271B599300FB0A60 /* SpaceshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6A1AD271B599300FB0A60 /* SpaceshipTests.swift */; };
 		7FC6A1B0271B6C1200FB0A60 /* SpaceStationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6A1AF271B6C1200FB0A60 /* SpaceStationTests.swift */; };
+		7FC6A1B1271B719C00FB0A60 /* SpaceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D30271B4561007D267E /* SpaceUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +93,7 @@
 		7FC20D26271B35E6007D267E /* FavoriteStationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStationRepository.swift; sourceTree = "<group>"; };
 		7FC20D28271B3639007D267E /* FavoriteStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStation.swift; sourceTree = "<group>"; };
 		7FC20D2B271B38B7007D267E /* FavoriteStationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStationUseCase.swift; sourceTree = "<group>"; };
-		7FC20D30271B4561007D267E /* SpaceShipUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceShipUseCase.swift; sourceTree = "<group>"; };
+		7FC20D30271B4561007D267E /* SpaceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceUseCase.swift; sourceTree = "<group>"; };
 		7FC20D32271B5251007D267E /* SpaceshipCraftingRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipCraftingRules.swift; sourceTree = "<group>"; };
 		7FC20D35271B530F007D267E /* SpaceshipTechnician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipTechnician.swift; sourceTree = "<group>"; };
 		7FC20D38271B533C007D267E /* BuildSpaceshipUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSpaceshipUseCase.swift; sourceTree = "<group>"; };
@@ -191,7 +192,7 @@
 			children = (
 				7FC20D0D271B1999007D267E /* StationLoader */,
 				7FC20CEA271AFEC5007D267E /* SpaceshipBuilding */,
-				7FC20D23271B2242007D267E /* SpaceShipUseCase */,
+				7FC20D23271B2242007D267E /* SpaceUseCase */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -243,13 +244,13 @@
 			path = Fakes;
 			sourceTree = "<group>";
 		};
-		7FC20D23271B2242007D267E /* SpaceShipUseCase */ = {
+		7FC20D23271B2242007D267E /* SpaceUseCase */ = {
 			isa = PBXGroup;
 			children = (
-				7FC20D30271B4561007D267E /* SpaceShipUseCase.swift */,
+				7FC20D30271B4561007D267E /* SpaceUseCase.swift */,
 				7FC20D1B271B1F1C007D267E /* SpaceInteractor.swift */,
 			);
-			path = SpaceShipUseCase;
+			path = SpaceUseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,7 +373,7 @@
 				7FC20CBD271AD837007D267E /* Domain.docc in Sources */,
 				7FC20D29271B3639007D267E /* FavoriteStation.swift in Sources */,
 				7FC20D0B271B1976007D267E /* LoadStationUseCase.swift in Sources */,
-				7FC20D31271B4561007D267E /* SpaceShipUseCase.swift in Sources */,
+				7FC20D31271B4561007D267E /* SpaceUseCase.swift in Sources */,
 				7FC20D33271B5251007D267E /* SpaceshipCraftingRules.swift in Sources */,
 				7FC20CE4271AFCC7007D267E /* Spaceship.swift in Sources */,
 				7FC20CDD271AF37C007D267E /* AppError.swift in Sources */,
@@ -409,6 +410,7 @@
 				7FC20D16271B1AC4007D267E /* FakeStationRepository.swift in Sources */,
 				7FC20D00271B0DFE007D267E /* AppResult.swift in Sources */,
 				7FC20D10271B1A03007D267E /* StationRepository.swift in Sources */,
+				7FC6A1B1271B719C00FB0A60 /* SpaceUseCase.swift in Sources */,
 				7FC20D0C271B1976007D267E /* LoadStationUseCase.swift in Sources */,
 				7FC20D22271B223D007D267E /* SpaceInteractorTests.swift in Sources */,
 				7FC20D18271B1BB7007D267E /* StationLoaderTests.swift in Sources */,

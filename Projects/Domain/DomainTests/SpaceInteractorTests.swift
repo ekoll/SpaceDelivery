@@ -48,4 +48,14 @@ class SpaceInteractorTests: XCTestCase {
             XCTAssertEqual(error as? SpaceInteractor.DomainError, SpaceInteractor.DomainError.shipIsNotHere)
         }
     }
+    
+    func test_do_damage() {
+        let damage = 10
+        let spaceShip = Spaceship(maxHealth: 100)
+        
+        let updatedSpaceShip = SpaceInteractor(damageByTime: damage).tryToDamage(ship: spaceShip)
+        
+        let expectedHealth = spaceShip.currentHealth - damage
+        XCTAssertEqual(updatedSpaceShip.currentHealth, expectedHealth)
+    }
 }
