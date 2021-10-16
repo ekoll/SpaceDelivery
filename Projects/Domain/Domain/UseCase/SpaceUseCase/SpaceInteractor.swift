@@ -9,23 +9,26 @@ import Foundation
 
 public class SpaceInteractor: SpaceUseCase {
     private let damageByTime: Int
+    private let home: Coordinate
     
-    public init(damageByTime: Int = 10) {
+    public init(damageByTime: Int = 10, home: Coordinate = .zero) {
         self.damageByTime = damageByTime
+        self.home = home
     }
     
-    public func move(ship: Spaceship, to station: SpaceStation) throws -> Spaceship {
+    public func move(ship: Spaceship, to station: SpaceStation) throws -> SpaceOperationResult<Spaceship> {
         guard ship.coordinate != station.coordinate else {
             throw DomainError.alreadyThere
         }
         
         var updatedShip = ship
         updatedShip.move(to: station.coordinate)
+        let status = updatedShip.goHomeIfNeeded(home: home)
         
-        return updatedShip
+        return .init(shipStatus: status, updated: updatedShip)
     }
     
-    public func makeDelivery(from ship: Spaceship, to station: SpaceStation) throws -> (Spaceship, SpaceStation) {
+    public func makeDelivery(from ship: Spaceship, to station: SpaceStation) throws -> SpaceOperationResult<(ship: Spaceship, station: SpaceStation)> {
         guard ship.coordinate == station.coordinate else {
             throw DomainError.shipIsNotHere
         }
@@ -36,17 +39,19 @@ public class SpaceInteractor: SpaceUseCase {
         let stockToDeliver = updatedShip.takeFromStock(station.need)
         updatedStation.add(stock: stockToDeliver)
         
-        return (updatedShip, updatedStation)
+        let status = updatedShip.goHomeIfNeeded(home: home)
+        
+        return .init(shipStatus: status, updated: (updatedShip, updatedStation))
     }
     
-    public func tryToDamage(ship: Spaceship) -> Spaceship {
+    public func tryToDamage(ship: Spaceship) -> SpaceOperationResult<Spaceship> {
         var updatedShip = ship
-        guard updatedShip.doDamage(damageByTime) else {
-            return ship
-        }
+        updatedShip.doDamage(damageByTime)
+        let status = updatedShip.goHomeIfNeeded(home: home)
         
-        return updatedShip
+        return .init(shipStatus: status, updated: updatedShip)
     }
+    
 }
 
 extension SpaceInteractor {

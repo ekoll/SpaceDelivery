@@ -11,11 +11,11 @@ class SpaceInteractorTests: XCTestCase {
 
     func test_move_ship() throws {
         let station = SpaceStation(coordinate: .init(x: 1, y: 1))
-        let spaceShip = Spaceship(coordinate: .zero)
+        let spaceShip = Spaceship(capacity: 100, universalSpaceTime: 100, maxHealth: 100, coordinate: .zero)
         
-        let updatedShip = try SpaceInteractor().move(ship: spaceShip, to: station)
+        let result = try SpaceInteractor().move(ship: spaceShip, to: station)
         
-        XCTAssertEqual(updatedShip.coordinate, station.coordinate)
+        XCTAssertEqual(result.updated.coordinate, station.coordinate)
     }
 
     func test_move_ship_when_already_at_target() throws {
@@ -31,13 +31,14 @@ class SpaceInteractorTests: XCTestCase {
     func test_delivery() throws {
         let coordinate = Coordinate.zero
         let station = SpaceStation(coordinate: coordinate, capacity: 100, stock: 0, need: 100)
-        let spaceship = Spaceship(capacity: 100, coordinate: coordinate)
+        let spaceship = Spaceship(capacity: 110, universalSpaceTime: 100, maxHealth: 100, coordinate: coordinate)
         
-        let (updatedShip, updatedStation) = try SpaceInteractor().makeDelivery(from: spaceship, to: station)
+        let result = try SpaceInteractor().makeDelivery(from: spaceship, to: station)
         
-        XCTAssertEqual(updatedShip.currentStock, 0)
-        XCTAssertEqual(updatedStation.stock, 100)
-        XCTAssertEqual(updatedStation.need, 0)
+        XCTAssertEqual(result.shipStatus, .good)
+        XCTAssertEqual(result.updated.ship.currentStock, 10)
+        XCTAssertEqual(result.updated.station.stock, 100)
+        XCTAssertEqual(result.updated.station.need, 0)
     }
     
     func test_delivery_for_different_coordinates_not_work() throws {
@@ -51,11 +52,33 @@ class SpaceInteractorTests: XCTestCase {
     
     func test_do_damage() {
         let damage = 10
-        let spaceShip = Spaceship(maxHealth: 100)
+        let spaceShip = Spaceship(capacity: 100, universalSpaceTime: 100, maxHealth: 100)
         
-        let updatedSpaceShip = SpaceInteractor(damageByTime: damage).tryToDamage(ship: spaceShip)
+        let result = SpaceInteractor(damageByTime: damage).tryToDamage(ship: spaceShip)
         
         let expectedHealth = spaceShip.currentHealth - damage
-        XCTAssertEqual(updatedSpaceShip.currentHealth, expectedHealth)
+        
+        XCTAssertEqual(result.shipStatus, .good)
+        XCTAssertEqual(result.updated.currentHealth, expectedHealth)
+    }
+    
+    func test_ship_resets_when_healt_drop_zero() {
+        let damage = 10
+        let spaceShip = Spaceship(capacity: 100, universalSpaceTime: 100, maxHealth: 10)
+        
+        let result = SpaceInteractor(damageByTime: damage).tryToDamage(ship: spaceShip)
+        
+        let expectedHealth = spaceShip.maxHealth
+        
+        XCTAssertEqual(result.updated.currentHealth, expectedHealth)
+    }
+    
+    func test_status_is_broken_when_healt_drop_zero() {
+        let damage = 10
+        let spaceShip = Spaceship(capacity: 100, universalSpaceTime: 100, maxHealth: 10)
+        
+        let result = SpaceInteractor(damageByTime: damage).tryToDamage(ship: spaceShip)
+        
+        XCTAssertEqual(result.shipStatus, .broken)
     }
 }

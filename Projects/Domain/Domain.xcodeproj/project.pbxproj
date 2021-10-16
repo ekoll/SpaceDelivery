@@ -55,6 +55,8 @@
 		7FC6A1AE271B599300FB0A60 /* SpaceshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6A1AD271B599300FB0A60 /* SpaceshipTests.swift */; };
 		7FC6A1B0271B6C1200FB0A60 /* SpaceStationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6A1AF271B6C1200FB0A60 /* SpaceStationTests.swift */; };
 		7FC6A1B1271B719C00FB0A60 /* SpaceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D30271B4561007D267E /* SpaceUseCase.swift */; };
+		7FC6A1B3271B742700FB0A60 /* SpaceOperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6A1B2271B742700FB0A60 /* SpaceOperationResult.swift */; };
+		7FC6A1B4271B742700FB0A60 /* SpaceOperationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6A1B2271B742700FB0A60 /* SpaceOperationResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,7 @@
 		7FC20D38271B533C007D267E /* BuildSpaceshipUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSpaceshipUseCase.swift; sourceTree = "<group>"; };
 		7FC6A1AD271B599300FB0A60 /* SpaceshipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipTests.swift; sourceTree = "<group>"; };
 		7FC6A1AF271B6C1200FB0A60 /* SpaceStationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceStationTests.swift; sourceTree = "<group>"; };
+		7FC6A1B2271B742700FB0A60 /* SpaceOperationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceOperationResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +214,7 @@
 			children = (
 				7FC20CFE271B0DFE007D267E /* AppResult.swift */,
 				7FC20CE6271AFCEF007D267E /* Coordinate.swift */,
+				7FC6A1B2271B742700FB0A60 /* SpaceOperationResult.swift */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -371,6 +375,7 @@
 				7FC20CFF271B0DFE007D267E /* AppResult.swift in Sources */,
 				7FC20D27271B35E6007D267E /* FavoriteStationRepository.swift in Sources */,
 				7FC20CBD271AD837007D267E /* Domain.docc in Sources */,
+				7FC6A1B3271B742700FB0A60 /* SpaceOperationResult.swift in Sources */,
 				7FC20D29271B3639007D267E /* FavoriteStation.swift in Sources */,
 				7FC20D0B271B1976007D267E /* LoadStationUseCase.swift in Sources */,
 				7FC20D31271B4561007D267E /* SpaceUseCase.swift in Sources */,
@@ -405,6 +410,7 @@
 				7FC20D2E271B39C7007D267E /* FavoriteStation.swift in Sources */,
 				7FC20D09271B182E007D267E /* SpaceStation.swift in Sources */,
 				7FC20CE5271AFCC7007D267E /* Spaceship.swift in Sources */,
+				7FC6A1B4271B742700FB0A60 /* SpaceOperationResult.swift in Sources */,
 				7FC20D3A271B533C007D267E /* BuildSpaceshipUseCase.swift in Sources */,
 				7FC20CDE271AF998007D267E /* AppError.swift in Sources */,
 				7FC20D16271B1AC4007D267E /* FakeStationRepository.swift in Sources */,

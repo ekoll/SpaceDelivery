@@ -15,8 +15,8 @@ public struct Spaceship {
     public let maxHealth: Int
     
     private(set) public var coordinate: Coordinate = .zero
-    private(set) public var currentUST: Int
     private(set) public var currentStock: Int64
+    private(set) public var currentUST: Int
     private(set) public var currentHealth: Int
     private(set) public var lastDamageReceivedTime: TimeInterval
     
@@ -44,14 +44,14 @@ public struct Spaceship {
         self.coordinate = coordinate
     }
     
-    internal mutating func doDamage(_ damage: Int) -> Bool {
+    internal mutating func doDamage(_ damage: Int) {
         let now = Date().timeIntervalSince1970
-        guard now - lastDamageReceivedTime > durabilityTime else { return false }
+        guard now - lastDamageReceivedTime > durabilityTime else { return }
         
         currentHealth = max(currentHealth - damage, 0)
         lastDamageReceivedTime = now
         
-        return true
+        return
     }
     
     internal mutating func takeFromStock(_ amount: Int64) -> Int64 {
@@ -59,6 +59,16 @@ public struct Spaceship {
         currentStock -= stock
         
         return stock
+    }
+    
+    internal mutating func goHomeIfNeeded(home: Coordinate) -> Status {
+        let shipStatus = isShipOK
+        if shipStatus == .good {
+            return .good
+        }
+        
+        go(home: home)
+        return shipStatus
     }
     
     internal var isShipOK: Status {
@@ -73,6 +83,14 @@ public struct Spaceship {
         }
         
         return .good
+    }
+    
+    internal mutating func go(home: Coordinate) {
+        coordinate = home
+        currentStock = capacity
+        currentUST = universalSpaceTime
+        currentHealth = maxHealth
+        lastDamageReceivedTime = Date().timeIntervalSince1970
     }
 }
 

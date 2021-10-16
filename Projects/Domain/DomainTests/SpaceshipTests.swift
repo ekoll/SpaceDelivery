@@ -48,19 +48,25 @@ class SpaceshipTests: XCTestCase {
     }
     
     // MARK: do damage
-    func test_do_damage_false_when_time_do_not_come() {
+    func test_do_damage_not_work_when_time_do_not_come() {
         var spaceship = Spaceship(durabilityTime: 10, lastDamageReceivedTime: Date().timeIntervalSince1970)
-        XCTAssertFalse(spaceship.doDamage(5))
+        spaceship.doDamage(5)
+        
+        let expectedHealth = spaceship.maxHealth
+        XCTAssertEqual(spaceship.currentHealth, expectedHealth)
     }
     
-    func test_do_damage_false_when_time_come() {
+    func test_do_damage_works_when_time_come() {
         var spaceship = Spaceship(durabilityTime: 10, lastDamageReceivedTime: Date().timeIntervalSince1970 - 20)
-        XCTAssertTrue(spaceship.doDamage(5))
+        spaceship.doDamage(5)
+        
+        let expectedHealth = spaceship.maxHealth - 5
+        XCTAssertEqual(spaceship.currentHealth, expectedHealth)
     }
     
     func test_do_damage_decrease_currentHealth_correctly() {
         var spaceship = Spaceship(durabilityTime: 10, maxHealth: 100, lastDamageReceivedTime: Date().timeIntervalSince1970 - 20)
-        _ = spaceship.doDamage(5)
+        spaceship.doDamage(5)
         
         let expectedHealth = 95
         XCTAssertEqual(spaceship.currentHealth, expectedHealth)
@@ -68,7 +74,7 @@ class SpaceshipTests: XCTestCase {
     
     func test_currentHealth_does_not_fall_under_0_after_do_damage() {
         var spaceship = Spaceship(durabilityTime: 10, maxHealth: 4, lastDamageReceivedTime: Date().timeIntervalSince1970 - 20)
-        _ = spaceship.doDamage(5)
+        spaceship.doDamage(5)
         
         let expectedHealth = 0
         XCTAssertEqual(spaceship.currentHealth, expectedHealth)
@@ -106,5 +112,38 @@ class SpaceshipTests: XCTestCase {
         
         let expedtedResult = Int64(0)
         XCTAssertEqual(spaceship.currentStock, expedtedResult)
+    }
+    
+    func test_go_home_when_status_ok() {
+        let currentLocation = Coordinate(x: 1, y: 1)
+        var spaceship = Spaceship(capacity: 100, universalSpaceTime: 100, maxHealth: 100, coordinate: currentLocation)
+        
+        _ = spaceship.goHomeIfNeeded(home: .zero)
+        
+        XCTAssertEqual(spaceship.coordinate, currentLocation)
+    }
+    
+    func test_go_home_works_when_status_broken() {
+        let currentLocation = Coordinate(x: 1, y: 1)
+        var spaceship = Spaceship(capacity: 100, universalSpaceTime: 100, maxHealth: 0, coordinate: currentLocation)
+        
+        _ = spaceship.goHomeIfNeeded(home: .zero)
+        XCTAssertEqual(spaceship.coordinate, .zero)
+    }
+    
+    func test_go_home_works_when_status_timeIsUp() {
+        let currentLocation = Coordinate(x: 1, y: 1)
+        var spaceship = Spaceship(capacity: 100, universalSpaceTime: 0, maxHealth: 100, coordinate: currentLocation)
+        
+        _ = spaceship.goHomeIfNeeded(home: .zero)
+        XCTAssertEqual(spaceship.coordinate, .zero)
+    }
+    
+    func test_go_home_works_when_status_noStock() {
+        let currentLocation = Coordinate(x: 1, y: 1)
+        var spaceship = Spaceship(capacity: 0, universalSpaceTime: 100, maxHealth: 100, coordinate: currentLocation)
+        
+        _ = spaceship.goHomeIfNeeded(home: .zero)
+        XCTAssertEqual(spaceship.coordinate, .zero)
     }
 }
