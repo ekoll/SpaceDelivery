@@ -19,6 +19,11 @@
 		7FC20CE5271AFCC7007D267E /* Spaceship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CE3271AFCC7007D267E /* Spaceship.swift */; };
 		7FC20CE7271AFCEF007D267E /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CE6271AFCEF007D267E /* Coordinate.swift */; };
 		7FC20CE8271AFCEF007D267E /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CE6271AFCEF007D267E /* Coordinate.swift */; };
+		7FC20CEC271AFEE7007D267E /* BuildSpaceshipUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CEB271AFEE7007D267E /* BuildSpaceshipUseCase.swift */; };
+		7FC20CED271AFEE7007D267E /* BuildSpaceshipUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CEB271AFEE7007D267E /* BuildSpaceshipUseCase.swift */; };
+		7FC20CEF271AFF38007D267E /* SpaceshipTechnician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CEE271AFF38007D267E /* SpaceshipTechnician.swift */; };
+		7FC20CF0271AFF38007D267E /* SpaceshipTechnician.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CEE271AFF38007D267E /* SpaceshipTechnician.swift */; };
+		7FC20CF2271AFF93007D267E /* SpaceshipTechnicianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CF1271AFF93007D267E /* SpaceshipTechnicianTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,9 @@
 		7FC20CDC271AF37C007D267E /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		7FC20CE3271AFCC7007D267E /* Spaceship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spaceship.swift; sourceTree = "<group>"; };
 		7FC20CE6271AFCEF007D267E /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		7FC20CEB271AFEE7007D267E /* BuildSpaceshipUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildSpaceshipUseCase.swift; sourceTree = "<group>"; };
+		7FC20CEE271AFF38007D267E /* SpaceshipTechnician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipTechnician.swift; sourceTree = "<group>"; };
+		7FC20CF1271AFF93007D267E /* SpaceshipTechnicianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipTechnicianTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,7 @@
 			children = (
 				7FC20CDA271AF360007D267E /* Structures */,
 				7FC20CD5271AF28C007D267E /* Model */,
+				7FC20CE9271AFEB8007D267E /* UseCase */,
 				7FC20CBB271AD837007D267E /* Domain.h */,
 				7FC20CBC271AD837007D267E /* Domain.docc */,
 			);
@@ -95,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				7FC20CC7271AD837007D267E /* SpaceshipBlueprintTests.swift */,
+				7FC20CF1271AFF93007D267E /* SpaceshipTechnicianTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -123,6 +133,23 @@
 				7FC20CDC271AF37C007D267E /* AppError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		7FC20CE9271AFEB8007D267E /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				7FC20CEA271AFEC5007D267E /* SpaceshipBuilding */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		7FC20CEA271AFEC5007D267E /* SpaceshipBuilding */ = {
+			isa = PBXGroup;
+			children = (
+				7FC20CEB271AFEE7007D267E /* BuildSpaceshipUseCase.swift */,
+				7FC20CEE271AFF38007D267E /* SpaceshipTechnician.swift */,
+			);
+			path = SpaceshipBuilding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,9 +263,11 @@
 			files = (
 				7FC20CD3271AD8F3007D267E /* SpaceshipBlueprint.swift in Sources */,
 				7FC20CE7271AFCEF007D267E /* Coordinate.swift in Sources */,
+				7FC20CEF271AFF38007D267E /* SpaceshipTechnician.swift in Sources */,
 				7FC20CBD271AD837007D267E /* Domain.docc in Sources */,
 				7FC20CE4271AFCC7007D267E /* Spaceship.swift in Sources */,
 				7FC20CDD271AF37C007D267E /* AppError.swift in Sources */,
+				7FC20CEC271AFEE7007D267E /* BuildSpaceshipUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,9 +277,12 @@
 			files = (
 				7FC20CD4271AD8F3007D267E /* SpaceshipBlueprint.swift in Sources */,
 				7FC20CE8271AFCEF007D267E /* Coordinate.swift in Sources */,
+				7FC20CF2271AFF93007D267E /* SpaceshipTechnicianTests.swift in Sources */,
+				7FC20CF0271AFF38007D267E /* SpaceshipTechnician.swift in Sources */,
 				7FC20CC8271AD837007D267E /* SpaceshipBlueprintTests.swift in Sources */,
 				7FC20CE5271AFCC7007D267E /* Spaceship.swift in Sources */,
 				7FC20CDE271AF998007D267E /* AppError.swift in Sources */,
+				7FC20CED271AFEE7007D267E /* BuildSpaceshipUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
