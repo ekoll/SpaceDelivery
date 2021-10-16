@@ -11,7 +11,7 @@ public struct SpaceStation {
     public var capacity: Int64 = 0
     public var stock: Int64 = 0
     public var need: Int64 = 0
-    public var isFavourite: Bool = false
+    public var isFavorite: Bool = false
 }
 
 extension SpaceStation: Equatable {

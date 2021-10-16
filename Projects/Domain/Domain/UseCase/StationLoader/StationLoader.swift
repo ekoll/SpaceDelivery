@@ -51,7 +51,7 @@ extension StationLoader: LoadStationUseCase {
             }
             
             var updatedStation = station
-            updatedStation.isFavourite = true
+            updatedStation.isFavorite = true
             if favorite.coordinate != station.coordinate {
                 updateCordinate(for: .init(name: station.name, coordinate: station.coordinate))
             }
@@ -70,7 +70,7 @@ extension StationLoader: FavoriteStationUseCase {
     }
     
     public func appendStationToFavorites(_ station: SpaceStation, completion: @escaping QueryCompletion<SpaceStation>) {
-        guard !station.isFavourite else {
+        guard !station.isFavorite else {
             completion(.succes(station))
             return
         }
@@ -79,7 +79,7 @@ extension StationLoader: FavoriteStationUseCase {
             switch error {
             case .none:
                 var updatedStation = station
-                updatedStation.isFavourite = true
+                updatedStation.isFavorite = true
                 
                 completion(.succes(updatedStation))
             case .some(let error):
@@ -89,7 +89,7 @@ extension StationLoader: FavoriteStationUseCase {
     }
 
     public func removeStationFromFavorites(_ station: SpaceStation, completion: @escaping QueryCompletion<SpaceStation>) {
-        guard station.isFavourite else {
+        guard station.isFavorite else {
             completion(.succes(station))
             return
         }
@@ -98,7 +98,7 @@ extension StationLoader: FavoriteStationUseCase {
             switch error {
             case .none:
                 var updatedStation = station
-                updatedStation.isFavourite = false
+                updatedStation.isFavorite = false
                 
                 completion(.succes(updatedStation))
             case .some(let error):
@@ -107,7 +107,7 @@ extension StationLoader: FavoriteStationUseCase {
         }
     }
     
-    private func updateCordinate(for station: FavoriteStation) {
+    internal func updateCordinate(for station: FavoriteStation) {
         favoriteRepository.update(station: station)
     }
 }
