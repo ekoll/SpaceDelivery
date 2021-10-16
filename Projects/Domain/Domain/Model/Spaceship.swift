@@ -13,4 +13,6 @@ public struct Spaceship {
     public var universalSpaceTime: Int
     public var durabilityTime: Int64
     public var maxHealth: Int
+    
+    public var coordinate: Coordinate
 }
