@@ -6,5 +6,5 @@
 //
 
 public protocol BuildSpaceshipUseCase {
-    func build(from blueprint: SpaceShipBlueprint, coordinate: Coordinate) throws -> Spaceship
+    func build(from blueprint: SpaceshipBlueprint, coordinate: Coordinate) throws -> Spaceship
 }

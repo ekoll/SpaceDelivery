@@ -8,13 +8,13 @@
 import Foundation
 
 public class SpaceshipTechnician: BuildSpaceshipUseCase {
-    private let rules: SpaceShipCraftingRules
+    private let rules: SpaceshipCraftingRules
     
-    public init(rules: SpaceShipCraftingRules) {
+    public init(rules: SpaceshipCraftingRules) {
         self.rules = rules
     }
     
-    public func build(from blueprint: SpaceShipBlueprint, coordinate: Coordinate) throws -> Spaceship {
+    public func build(from blueprint: SpaceshipBlueprint, coordinate: Coordinate) throws -> Spaceship {
         try blueprint.validate()
         
         return .init(
