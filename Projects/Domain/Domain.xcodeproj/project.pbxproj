@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		7FC20CBD271AD837007D267E /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CBC271AD837007D267E /* Domain.docc */; };
 		7FC20CC3271AD837007D267E /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC20CB8271AD837007D267E /* Domain.framework */; };
-		7FC20CC8271AD837007D267E /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CC7271AD837007D267E /* DomainTests.swift */; };
+		7FC20CC8271AD837007D267E /* SpaceshipBlueprintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CC7271AD837007D267E /* SpaceshipBlueprintTests.swift */; };
 		7FC20CC9271AD837007D267E /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FC20CBB271AD837007D267E /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FC20CD3271AD8F3007D267E /* SpaceshipBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CD2271AD8F3007D267E /* SpaceshipBlueprint.swift */; };
+		7FC20CD4271AD8F3007D267E /* SpaceshipBlueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20CD2271AD8F3007D267E /* SpaceshipBlueprint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,8 @@
 		7FC20CBB271AD837007D267E /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		7FC20CBC271AD837007D267E /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
 		7FC20CC2271AD837007D267E /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FC20CC7271AD837007D267E /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		7FC20CC7271AD837007D267E /* SpaceshipBlueprintTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipBlueprintTests.swift; sourceTree = "<group>"; };
+		7FC20CD2271AD8F3007D267E /* SpaceshipBlueprint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceshipBlueprint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,7 @@
 		7FC20CBA271AD837007D267E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				7FC20CD5271AF28C007D267E /* Model */,
 				7FC20CBB271AD837007D267E /* Domain.h */,
 				7FC20CBC271AD837007D267E /* Domain.docc */,
 			);
@@ -80,9 +84,17 @@
 		7FC20CC6271AD837007D267E /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
-				7FC20CC7271AD837007D267E /* DomainTests.swift */,
+				7FC20CC7271AD837007D267E /* SpaceshipBlueprintTests.swift */,
 			);
 			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		7FC20CD5271AF28C007D267E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7FC20CD2271AD8F3007D267E /* SpaceshipBlueprint.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC20CD3271AD8F3007D267E /* SpaceshipBlueprint.swift in Sources */,
 				7FC20CBD271AD837007D267E /* Domain.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FC20CC8271AD837007D267E /* DomainTests.swift in Sources */,
+				7FC20CD4271AD8F3007D267E /* SpaceshipBlueprint.swift in Sources */,
+				7FC20CC8271AD837007D267E /* SpaceshipBlueprintTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +410,7 @@
 		7FC20CD0271AD837007D267E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -416,6 +431,7 @@
 		7FC20CD1271AD837007D267E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
