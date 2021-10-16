@@ -13,7 +13,7 @@ class SpaceTests: XCTestCase {
         let station = SpaceStation(coordinate: .init(x: 1, y: 1))
         let spaceShip = Spaceship(coordinate: .zero)
         
-        let updatedShip = try Space().move(ship: spaceShip, to: station)
+        let updatedShip = try SpaceInteractor().move(ship: spaceShip, to: station)
         
         XCTAssertEqual(updatedShip.coordinate, station.coordinate)
     }
@@ -23,8 +23,8 @@ class SpaceTests: XCTestCase {
         let station = SpaceStation(coordinate: coordinate)
         let spaceShip = Spaceship(coordinate: coordinate)
         
-        XCTAssertThrowsError(try Space().move(ship: spaceShip, to: station), "Ship is already at station.") { error in
-            XCTAssertEqual(error as? Space.DomainError, Space.DomainError.alreadyThere)
+        XCTAssertThrowsError(try SpaceInteractor().move(ship: spaceShip, to: station), "Ship is already at station.") { error in
+            XCTAssertEqual(error as? SpaceInteractor.DomainError, SpaceInteractor.DomainError.alreadyThere)
         }
     }
 }

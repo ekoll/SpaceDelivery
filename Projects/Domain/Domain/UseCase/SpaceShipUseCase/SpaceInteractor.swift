@@ -1,5 +1,5 @@
 //
-//  Space.swift
+//  SpaceInteractor.swift
 //  Domain
 //
 //  Created by Ekrem Duvarbasi on 16.10.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Space {
+public class SpaceInteractor {
     
     public func move(ship: Spaceship, to station: SpaceStation) throws -> Spaceship {
         guard ship.coordinate != station.coordinate else {
@@ -20,7 +20,7 @@ public class Space {
     }
 }
 
-extension Space {
+extension SpaceInteractor {
     enum DomainError: String, AppError {
         case alreadyThere = "Ship is already at this station"
         

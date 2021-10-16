@@ -6,9 +6,32 @@
 //
 
 struct FakeStationRepository: StationRepository {
-    var stationsResult: AppResult<[SpaceStation]>
+    var stationsResult: AppResult<[SpaceStation]> = .succes([])
     
     func loadStations(completion: @escaping QueryCompletion<[SpaceStation]>) {
         completion(stationsResult)
+    }
+}
+
+struct FakeFavoriteStationRepository: FavoriteStationRepository {
+    var stationsResult: AppResult<[FavoriteStation]> = .succes([])
+    var appendStation: (FavoriteStation) -> AppError? = { _ in nil }
+    var removeStation: (FavoriteStation) -> AppError? = { _ in nil }
+    var updateStation: (FavoriteStation) -> Void = { _ in }
+    
+    func loadStations(completion: (AppResult<[FavoriteStation]>) -> Void) {
+        completion(stationsResult)
+    }
+    
+    func append(station: FavoriteStation, completion: (AppError?) -> Void) {
+        completion(appendStation(station))
+    }
+    
+    func remove(station: FavoriteStation, completion: (AppError?) -> Void) {
+        completion(removeStation(station))
+    }
+    
+    func update(station: FavoriteStation) {
+        updateStation(station)
     }
 }
