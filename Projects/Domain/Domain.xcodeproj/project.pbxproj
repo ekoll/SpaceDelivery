@@ -42,6 +42,7 @@
 		7FC20D1C271B1F1C007D267E /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D1B271B1F1C007D267E /* Space.swift */; };
 		7FC20D1D271B1F1C007D267E /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D1B271B1F1C007D267E /* Space.swift */; };
 		7FC20D22271B223D007D267E /* SpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D21271B223D007D267E /* SpaceTests.swift */; };
+		7FC20D25271B3487007D267E /* CoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC20D24271B3487007D267E /* CoordinateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		7FC20D19271B1D37007D267E /* FakeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeError.swift; sourceTree = "<group>"; };
 		7FC20D1B271B1F1C007D267E /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		7FC20D21271B223D007D267E /* SpaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTests.swift; sourceTree = "<group>"; };
+		7FC20D24271B3487007D267E /* CoordinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				7FC20CF1271AFF93007D267E /* SpaceshipTechnicianTests.swift */,
 				7FC20D17271B1BB7007D267E /* StationLoaderTests.swift */,
 				7FC20D21271B223D007D267E /* SpaceTests.swift */,
+				7FC20D24271B3487007D267E /* CoordinateTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				7FC20CD4271AD8F3007D267E /* SpaceshipBlueprint.swift in Sources */,
 				7FC20CE8271AFCEF007D267E /* Coordinate.swift in Sources */,
 				7FC20CF2271AFF93007D267E /* SpaceshipTechnicianTests.swift in Sources */,
+				7FC20D25271B3487007D267E /* CoordinateTests.swift in Sources */,
 				7FC20CF0271AFF38007D267E /* SpaceshipTechnician.swift in Sources */,
 				7FC20CFD271B0D5C007D267E /* Definitions.swift in Sources */,
 				7FC20D1A271B1D37007D267E /* FakeError.swift in Sources */,
