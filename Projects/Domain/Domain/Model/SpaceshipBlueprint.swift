@@ -9,11 +9,13 @@ import Foundation
 
 public class SpaceShipBlueprint {
     public let maxAbilityPoints: Int
+    public var name: String
     private(set) public var durability: Int
     private(set) public var speed: Int
     private(set) public var capacity: Int
     
-    public init(maxAbilityPoints: Int = 15) {
+    public init(name: String = "", maxAbilityPoints: Int = 15) {
+        self.name = name
         self.maxAbilityPoints = maxAbilityPoints
         
         let pointPerAbility = maxAbilityPoints / 3
@@ -32,11 +34,12 @@ public class SpaceShipBlueprint {
         }
     }
     
-    internal init(maxAbilityPoints: Int = 10, durability: Int = 0, speed: Int = 0, capacity: Int = 0) throws {
+    internal init(name: String = "", maxAbilityPoints: Int = 10, durability: Int = 0, speed: Int = 0, capacity: Int = 0) throws {
         guard durability + speed + capacity <= maxAbilityPoints else {
             throw NSError(domain: "SpaceshipBlueprint", code: 0, userInfo: ["Message": "Total ability points cannot be greater than max ability points"])
         }
         
+        self.name = name
         self.maxAbilityPoints = maxAbilityPoints
         self.durability = durability
         self.speed = speed
