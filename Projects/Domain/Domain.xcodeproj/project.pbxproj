@@ -97,7 +97,7 @@
 		7FC20CBA271AD837007D267E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				7FC20CDA271AF360007D267E /* Structures */,
+				7FC20CDA271AF360007D267E /* Common */,
 				7FC20CD5271AF28C007D267E /* Model */,
 				7FC20CE9271AFEB8007D267E /* UseCase */,
 				7FC20CBB271AD837007D267E /* Domain.h */,
@@ -124,23 +124,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7FC20CDA271AF360007D267E /* Structures */ = {
+		7FC20CDA271AF360007D267E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				7FC20CDB271AF366007D267E /* Error */,
-				7FC20CFE271B0DFE007D267E /* AppResult.swift */,
-				7FC20CE6271AFCEF007D267E /* Coordinate.swift */,
+				7FC20D02271B0EDE007D267E /* Interfaces */,
+				7FC20D01271B0EC7007D267E /* Structures */,
 				7FC20CFB271B0D5C007D267E /* Definitions.swift */,
 			);
-			path = Structures;
-			sourceTree = "<group>";
-		};
-		7FC20CDB271AF366007D267E /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				7FC20CDC271AF37C007D267E /* AppError.swift */,
-			);
-			path = Error;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		7FC20CE9271AFEB8007D267E /* UseCase */ = {
@@ -158,6 +149,23 @@
 				7FC20CEE271AFF38007D267E /* SpaceshipTechnician.swift */,
 			);
 			path = SpaceshipBuilding;
+			sourceTree = "<group>";
+		};
+		7FC20D01271B0EC7007D267E /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				7FC20CFE271B0DFE007D267E /* AppResult.swift */,
+				7FC20CE6271AFCEF007D267E /* Coordinate.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		7FC20D02271B0EDE007D267E /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				7FC20CDC271AF37C007D267E /* AppError.swift */,
+			);
+			path = Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
