@@ -70,11 +70,10 @@ class StationLoaderTests: XCTestCase {
     }
     
     func test_success_with_true_favourites() {
-        let givenStations: [FavouriteStation] = [
+        let givenStations: [FavoriteStation] = [
             .init(name: "Test1", coordinate: .zero),
             .init(name: "Test2", coordinate: .zero),
             .init(name: "Test3", coordinate: .zero)
-            
         ]
         let repository = FakeFavoriteStationRepository(stationsResult: .succes(givenStations))
         let loader = StationLoader(repository: FakeStationRepository(), favouriteRepository: repository)
@@ -118,7 +117,7 @@ class StationLoaderTests: XCTestCase {
     }
     
     func test_add_station_saves_true_value() {
-        let expectedStation = FavouriteStation(name: "Test", coordinate: .init(x: 5, y: 4))
+        let expectedStation = FavoriteStation(name: "Test", coordinate: .init(x: 5, y: 4))
         
         let repository = FakeFavoriteStationRepository(appendStation: { station in
             XCTAssertEqual(station, expectedStation)
@@ -160,7 +159,7 @@ class StationLoaderTests: XCTestCase {
     }
     
     func test_remove_station_removes_true_value() {
-        let expectedStation = FavouriteStation(name: "Test", coordinate: .init(x: 5, y: 4))
+        let expectedStation = FavoriteStation(name: "Test", coordinate: .init(x: 5, y: 4))
         
         let repository = FakeFavoriteStationRepository(removeStation: { station in
             XCTAssertEqual(station, expectedStation)

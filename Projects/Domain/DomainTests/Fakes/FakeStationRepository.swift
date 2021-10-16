@@ -13,20 +13,25 @@ struct FakeStationRepository: StationRepository {
     }
 }
 
-struct FakeFavoriteStationRepository: FavouriteStationRepository {
-    var stationsResult: AppResult<[FavouriteStation]> = .succes([])
-    var appendStation: (FavouriteStation) -> AppError? = { _ in nil }
-    var removeStation: (FavouriteStation) -> AppError? = { _ in nil }
+struct FakeFavoriteStationRepository: FavoriteStationRepository {
+    var stationsResult: AppResult<[FavoriteStation]> = .succes([])
+    var appendStation: (FavoriteStation) -> AppError? = { _ in nil }
+    var removeStation: (FavoriteStation) -> AppError? = { _ in nil }
+    var updateStation: (FavoriteStation) -> Void = { _ in }
     
-    func loadStations(completion: (AppResult<[FavouriteStation]>) -> Void) {
+    func loadStations(completion: (AppResult<[FavoriteStation]>) -> Void) {
         completion(stationsResult)
     }
     
-    func append(station: FavouriteStation, completion: (AppError?) -> Void) {
+    func append(station: FavoriteStation, completion: (AppError?) -> Void) {
         completion(appendStation(station))
     }
     
-    func remove(station: FavouriteStation, completion: (AppError?) -> Void) {
+    func remove(station: FavoriteStation, completion: (AppError?) -> Void) {
         completion(removeStation(station))
+    }
+    
+    func update(station: FavoriteStation) {
+        updateStation(station)
     }
 }
