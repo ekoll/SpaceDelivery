@@ -6,11 +6,11 @@
 //
 
 public struct SpaceStation {
-    public var name: String
-    public var coordinate: Coordinate
-    public var capacity: Int64
-    public var stock: Int64
-    public var need: Int64
+    public var name: String = ""
+    public var coordinate: Coordinate = .zero
+    public var capacity: Int64 = 0
+    public var stock: Int64 = 0
+    public var need: Int64 = 0
 }
 
 extension SpaceStation: Equatable {

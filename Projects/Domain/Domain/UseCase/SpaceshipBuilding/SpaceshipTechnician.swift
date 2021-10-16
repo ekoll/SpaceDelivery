@@ -7,7 +7,7 @@
 
 public class SpaceshipTechnician: BuildSpaceshipUseCase {
     
-    public func build(from blueprint: SpaceShipBlueprint) throws -> Spaceship {
+    public func build(from blueprint: SpaceShipBlueprint, coordinate: Coordinate) throws -> Spaceship {
         try blueprint.validate()
         
         return .init(
@@ -15,7 +15,8 @@ public class SpaceshipTechnician: BuildSpaceshipUseCase {
             capacity: blueprint.capacity,
             universalSpaceTime: blueprint.speed,
             durabilityTime: Int64(blueprint.durability),
-            maxHealth: 100
+            maxHealth: 100,
+            coordinate: coordinate
         )
     }
 }
