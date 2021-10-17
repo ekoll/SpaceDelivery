@@ -15,12 +15,13 @@ public struct Spaceship {
     public let maxHealth: Int
     
     private(set) public var coordinate: Coordinate = .zero
+    private(set) public var stationName: String = ""
     private(set) public var currentStock: Int64
     private(set) public var currentUST: Int
     private(set) public var currentHealth: Int
     private(set) public var lastDamageReceivedTime: TimeInterval
     
-    internal init(name: String = "", capacity: Int64 = 0, universalSpaceTime: Int = 0, durabilityTime: TimeInterval = 0, maxHealth: Int = 100, coordinate: Coordinate = .zero, lastDamageReceivedTime: TimeInterval = Date().timeIntervalSince1970) {
+    internal init(name: String = "", capacity: Int64 = 0, universalSpaceTime: Int = 0, durabilityTime: TimeInterval = 0, maxHealth: Int = 100, stationName: String = "", coordinate: Coordinate = .zero, lastDamageReceivedTime: TimeInterval = Date().timeIntervalSince1970) {
         self.name = name
         self.capacity = capacity
         self.universalSpaceTime = universalSpaceTime
@@ -38,10 +39,11 @@ public struct Spaceship {
         lastDamageReceivedTime = Date().timeIntervalSince1970
     }
     
-    internal mutating func move(to coordinate: Coordinate) {
+    internal mutating func move(to coordinate: Coordinate, name: String) {
         let distance = coordinate.distance(from: self.coordinate)
         currentUST -= Int(distance)
         self.coordinate = coordinate
+        self.stationName = name
     }
     
     internal mutating func doDamage(_ damage: Int) {
@@ -61,13 +63,13 @@ public struct Spaceship {
         return stock
     }
     
-    internal mutating func goHomeIfNeeded(home: Coordinate) -> Status {
+    internal mutating func goHomeIfNeeded(home: Coordinate, name: String) -> Status {
         let shipStatus = isShipOK
         if shipStatus == .good {
             return .good
         }
         
-        go(home: home)
+        go(home: home, name: name)
         return shipStatus
     }
     
@@ -85,8 +87,9 @@ public struct Spaceship {
         return .good
     }
     
-    internal mutating func go(home: Coordinate) {
+    internal mutating func go(home: Coordinate, name: String) {
         coordinate = home
+        stationName = name
         currentStock = capacity
         currentUST = universalSpaceTime
         currentHealth = maxHealth

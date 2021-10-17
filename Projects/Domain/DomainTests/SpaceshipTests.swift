@@ -13,15 +13,23 @@ class SpaceshipTests: XCTestCase {
     func test_move_changes_coordinate() {
         let expedtedResult = Coordinate(x: 5, y: 4)
         var spaceship = Spaceship(coordinate: .zero)
-        spaceship.move(to: expedtedResult)
+        spaceship.move(to: expedtedResult, name: "")
         
         XCTAssertEqual(spaceship.coordinate, expedtedResult)
+    }
+    
+    func test_move_changes_stationName() {
+        let expedtedResult = "Name"
+        var spaceship = Spaceship(coordinate: .zero)
+        spaceship.move(to: .init(x: 2, y: 2), name: expedtedResult)
+        
+        XCTAssertEqual(spaceship.stationName, expedtedResult)
     }
 
     func test_move_decreases_currentUST() {
         let expedtedResult = 95
         var spaceship = Spaceship(universalSpaceTime: 100, coordinate: .zero)
-        spaceship.move(to: .init(x: 3, y: 4))
+        spaceship.move(to: .init(x: 3, y: 4), name: "")
         
         XCTAssertEqual(spaceship.currentUST, expedtedResult)
     }
@@ -118,7 +126,7 @@ class SpaceshipTests: XCTestCase {
         let currentLocation = Coordinate(x: 1, y: 1)
         var spaceship = Spaceship(capacity: 100, universalSpaceTime: 100, maxHealth: 100, coordinate: currentLocation)
         
-        _ = spaceship.goHomeIfNeeded(home: .zero)
+        _ = spaceship.goHomeIfNeeded(home: .zero, name: "")
         
         XCTAssertEqual(spaceship.coordinate, currentLocation)
     }
@@ -127,7 +135,7 @@ class SpaceshipTests: XCTestCase {
         let currentLocation = Coordinate(x: 1, y: 1)
         var spaceship = Spaceship(capacity: 100, universalSpaceTime: 100, maxHealth: 0, coordinate: currentLocation)
         
-        _ = spaceship.goHomeIfNeeded(home: .zero)
+        _ = spaceship.goHomeIfNeeded(home: .zero, name: "")
         XCTAssertEqual(spaceship.coordinate, .zero)
     }
     
@@ -135,7 +143,7 @@ class SpaceshipTests: XCTestCase {
         let currentLocation = Coordinate(x: 1, y: 1)
         var spaceship = Spaceship(capacity: 100, universalSpaceTime: 0, maxHealth: 100, coordinate: currentLocation)
         
-        _ = spaceship.goHomeIfNeeded(home: .zero)
+        _ = spaceship.goHomeIfNeeded(home: .zero, name: "")
         XCTAssertEqual(spaceship.coordinate, .zero)
     }
     
@@ -143,7 +151,7 @@ class SpaceshipTests: XCTestCase {
         let currentLocation = Coordinate(x: 1, y: 1)
         var spaceship = Spaceship(capacity: 0, universalSpaceTime: 100, maxHealth: 100, coordinate: currentLocation)
         
-        _ = spaceship.goHomeIfNeeded(home: .zero)
+        _ = spaceship.goHomeIfNeeded(home: .zero, name: "")
         XCTAssertEqual(spaceship.coordinate, .zero)
     }
 }

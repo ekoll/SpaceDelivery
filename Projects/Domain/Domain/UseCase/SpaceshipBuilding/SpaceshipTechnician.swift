@@ -23,7 +23,8 @@ public class SpaceshipTechnician: BuildSpaceshipUseCase {
             universalSpaceTime: blueprint.speed * rules.universalSpaceTimeMultiplier,
             durabilityTime: TimeInterval(blueprint.durability) * rules.durabilityTimeMultiplier,
             maxHealth: rules.maxHealth,
-            coordinate: rules.home
+            stationName: rules.homeName,
+            coordinate: rules.homeCoordinate
         )
     }
 }

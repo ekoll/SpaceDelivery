@@ -35,7 +35,7 @@ class SpaceshipTechnicianTests: XCTestCase {
         let blueprint = SpaceshipBlueprint(name: "a_valid_name")
         let expedtedCoordinate = Coordinate(x: 5, y: 2)
         
-        let technician = SpaceshipTechnician(rules: .init(home: expedtedCoordinate))
+        let technician = SpaceshipTechnician(rules: .init(homeCoordinate: expedtedCoordinate))
         let spaceship = try technician.build(from: blueprint)
         
         XCTAssertEqual(spaceship.coordinate, expedtedCoordinate)
