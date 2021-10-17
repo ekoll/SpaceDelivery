@@ -25,7 +25,7 @@ class SpaceView: XibViewController {
     
     @IBOutlet weak var stationLabel: UILabel!
     
-    @IBOutlet weak var searchTextField: UILabel!
+    @IBOutlet weak var searchTextField: UITextField!
     
     @IBOutlet weak var tableView: UITableView!
     

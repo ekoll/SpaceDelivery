@@ -7,9 +7,11 @@
 
 import Domain
 import Presentation
+import UIKit
 
 class ShipBuildViewRouter: BaseRouter, ShipBuildRouter {
     func presentGame(ship: Spaceship) {
+        guard let controller = UIApplication.shared.getTopViewController() else { return }
         let container = generateContainer(ship: ship)
         
         let viewModel = SpaceViewModel(
@@ -20,7 +22,11 @@ class ShipBuildViewRouter: BaseRouter, ShipBuildRouter {
             favoriteUsecase: container.resolve()
         )
         
-        print("Station count:", viewModel.stations.data.count)
+        let view = SpaceView(viewModel: viewModel)
+        viewModel.view = view
+        
+        view.modalPresentationStyle = .fullScreen
+        controller.present(view, animated: true)
     }
     
     func generateContainer(ship: Spaceship) -> DependencyContainer {

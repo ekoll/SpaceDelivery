@@ -10,6 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpaceView" customModule="_3652c41ebc5e7170a98811219ab09e0" customModuleProvider="target">
             <connections>
+                <outlet property="durabilityTimeLabel" destination="swU-au-lfp" id="EVb-nb-fFV"/>
+                <outlet property="healthLabel" destination="J3B-RM-In1" id="baU-Ah-Oqu"/>
+                <outlet property="healthProgress" destination="vmy-b7-7Wq" id="zfy-Gk-ttB"/>
+                <outlet property="remainingSecondsLabel" destination="ch5-Tc-EAd" id="M10-iR-l8n"/>
+                <outlet property="searchTextField" destination="DC8-V7-EQd" id="dis-GZ-rKD"/>
+                <outlet property="shipNameLabel" destination="ibW-nh-FoJ" id="E23-uo-XxR"/>
+                <outlet property="stationLabel" destination="MWf-oZ-ExV" id="Mex-7Y-TNX"/>
+                <outlet property="stockLabel" destination="OGT-oR-UOx" id="JUn-db-PWf"/>
+                <outlet property="tableView" destination="2Lm-P1-MBn" id="dCs-TU-1CD"/>
+                <outlet property="ustLabel" destination="NP3-my-JB2" id="83M-4g-Nf5"/>
                 <outlet property="view" destination="iN0-l3-epB" id="IRS-Xq-xw9"/>
             </connections>
         </placeholder>
@@ -119,7 +129,7 @@
                         <constraint firstAttribute="height" constant="34" id="Kac-24-lre"/>
                     </constraints>
                 </stackView>
-                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JzN-pQ-E5L" userLabel="Station">
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JzN-pQ-E5L" userLabel="Station">
                     <rect key="frame" x="134" y="129.5" width="146.5" height="17"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Station:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGv-hF-3er">
