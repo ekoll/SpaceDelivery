@@ -12,6 +12,11 @@ public struct Coordinate: Equatable {
     public var x: Double
     public var y: Double
     
+    public init(x: Double, y: Double) {
+        self.x = x
+        self.y = y
+    }
+    
     public func distance(from target: Coordinate) -> Double {
         let x = pow(Double(target.x - x), 2)
         let y = pow(Double(target.y - y), 2)
