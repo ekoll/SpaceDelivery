@@ -9,20 +9,22 @@ import Domain
 
 public class SpaceViewModel {
     private var spaceship: Spaceship
-    private let shipLocation: ShipLocation
+    private let home: Location
+    private let shipLocation: Location
     private let spaceUsecase: SpaceUseCase
     private let favoriteUsecase: FavoriteStationUseCase
     public weak var view: Renderer?
     
     public let stations: FilterableStations
     
-    public init(spaceship: Spaceship, shipLocation: ShipLocation, stations: [SpaceStation], spaceUsecase: SpaceUseCase, favoriteUsecase: FavoriteStationUseCase) {
+    public init(spaceship: Spaceship, home: Location, shipLocation: Location, stations: [SpaceStation], spaceUsecase: SpaceUseCase, favoriteUsecase: FavoriteStationUseCase) {
         self.spaceship = spaceship
+        self.home = home
         self.shipLocation = shipLocation
         self.spaceUsecase = spaceUsecase
         self.favoriteUsecase = favoriteUsecase
         
-        self.stations = FilterableStations(stations: stations.map { .init(station: $0, shipLocation: shipLocation) })
+        self.stations = FilterableStations(stations: stations.map { .init(station: $0, home: home, shipLocation: shipLocation) })
     }
 }
 

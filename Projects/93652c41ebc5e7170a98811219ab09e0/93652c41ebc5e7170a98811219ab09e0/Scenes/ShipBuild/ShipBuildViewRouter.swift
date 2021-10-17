@@ -14,14 +14,7 @@ class ShipBuildViewRouter: BaseRouter, ShipBuildRouter {
         guard let controller = UIApplication.shared.getTopViewController() else { return }
         let container = generateContainer(ship: ship)
         
-        let viewModel = SpaceViewModel(
-            spaceship: ship,
-            shipLocation: .init(name: ship.stationName, coorditnate: ship.coordinate),
-            stations: container.resolve(),
-            spaceUsecase: container.resolve(),
-            favoriteUsecase: container.resolve()
-        )
-        
+        let viewModel: SpaceViewModel = container.resolve()
         let view = SpaceView(viewModel: viewModel)
         viewModel.view = view
         
@@ -38,7 +31,19 @@ class ShipBuildViewRouter: BaseRouter, ShipBuildRouter {
         }
         container.append(type: FavoriteStationUseCase.self, generator: { cont in
             StationLoader(repository: cont.resolve(), favouriteRepository: cont.resolve())
+        })
+        
+        container.append(type: SpaceViewModel.self, generator: { cont in
+            let home: HomeStation = cont.resolve()
             
+            return SpaceViewModel(
+                spaceship: ship,
+                home: .init(name: home.name, coorditnate: home.coordinate),
+                shipLocation: .init(name: ship.stationName, coorditnate: ship.coordinate),
+                stations: container.resolve(),
+                spaceUsecase: container.resolve(),
+                favoriteUsecase: container.resolve()
+            )
         })
         
         return container

@@ -38,7 +38,8 @@ class StationCell: UITableViewCell {
         capacityLabel.text = viewModel.capacityText
         stockLabel.text = viewModel.stockText
         needLabel.text = viewModel.needText
-        // TODO: home distance
+        homeDistanceLabel.text = viewModel.distanceToHome
+        homeDistanceView.isHidden = !viewModel.isFavourite
         
         favoriteButton.setImage(
             viewModel.isFavourite ? #imageLiteral(resourceName: "favorite-filled") : #imageLiteral(resourceName: "favorite"),

@@ -7,7 +7,7 @@
 
 import Domain
 
-public class ShipLocation {
+public class Location {
     internal var name: String
     internal var coorditnate: Coordinate
     
