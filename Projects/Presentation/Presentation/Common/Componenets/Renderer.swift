@@ -5,4 +5,8 @@
 //  Created by Ekrem Duvarbasi on 17.10.2021.
 //
 
-import Foundation
+public protocol Renderer: AnyObject {
+    func present(error: String)
+    func present(alert: String)
+    func ask(yesNoQuestion: String, completion: @escaping (Bool) -> Void)
+}
