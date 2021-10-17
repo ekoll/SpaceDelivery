@@ -39,6 +39,9 @@
 		7F49D2C2271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2C1271C60FB0068EC14 /* LoadingViewRouter.swift */; };
 		7F49D2C3271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2C1271C60FB0068EC14 /* LoadingViewRouter.swift */; };
 		7F49D2C4271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2C1271C60FB0068EC14 /* LoadingViewRouter.swift */; };
+		7F49D2C6271C62100068EC14 /* BaseRoouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2C5271C62100068EC14 /* BaseRoouter.swift */; };
+		7F49D2C7271C62100068EC14 /* BaseRoouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2C5271C62100068EC14 /* BaseRoouter.swift */; };
+		7F49D2C8271C62100068EC14 /* BaseRoouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2C5271C62100068EC14 /* BaseRoouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +78,7 @@
 
 /* Begin PBXFileReference section */
 		7F242C73271C4ABF006803D2 /* 93652c41ebc5e7170a98811219ab09e0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 93652c41ebc5e7170a98811219ab09e0.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7F242C76271C4ABF006803D2 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 6; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
+		7F242C76271C4ABF006803D2 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
 		7F242C7A271C4ABF006803D2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7F242C7F271C4AC1006803D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F242C82271C4AC1006803D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 		7F49D2B7271C5A620068EC14 /* XibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibViewController.swift; sourceTree = "<group>"; };
 		7F49D2BD271C5B250068EC14 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		7F49D2C1271C60FB0068EC14 /* LoadingViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewRouter.swift; sourceTree = "<group>"; };
+		7F49D2C5271C62100068EC14 /* BaseRoouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				7F49D2B2271C59320068EC14 /* DependencyContainer.swift */,
+				7F49D2C5271C62100068EC14 /* BaseRoouter.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 				7F49D2C2271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,
 				7F242C7B271C4ABF006803D2 /* LoadingView.swift in Sources */,
 				7F49D2B3271C59320068EC14 /* DependencyContainer.swift in Sources */,
+				7F49D2C6271C62100068EC14 /* BaseRoouter.swift in Sources */,
 				7F242C77271C4ABF006803D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +405,7 @@
 				7F49D2C3271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,
 				7F49D2B9271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F242C8E271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0Tests.swift in Sources */,
+				7F49D2C7271C62100068EC14 /* BaseRoouter.swift in Sources */,
 				7F49D2AB271C56C10068EC14 /* Errors.swift in Sources */,
 				7F49D2A5271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
 			);
@@ -415,6 +422,7 @@
 				7F49D2C4271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,
 				7F242C98271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITests.swift in Sources */,
 				7F49D2B5271C59320068EC14 /* DependencyContainer.swift in Sources */,
+				7F49D2C8271C62100068EC14 /* BaseRoouter.swift in Sources */,
 				7F242C9A271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

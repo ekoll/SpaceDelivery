@@ -8,7 +8,7 @@
 import Domain
 import Presentation
 
-class LoadingViewRouter: AppLoadRouter {
+class LoadingViewRouter: BaseRouter, AppLoadRouter {
     func presentSpaceshipBuild(stations: [SpaceStation]) {
         
     }
