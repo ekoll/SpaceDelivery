@@ -267,6 +267,7 @@
 				7F49D2C9271C62730068EC14 /* Main */,
 				7F49D2BC271C5AD70068EC14 /* Loading */,
 				7F49D2CE271C67700068EC14 /* ShipBuild */,
+				7F49D2E8271C7CC00068EC14 /* Space */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -307,6 +308,13 @@
 				7F49D2E0271C75530068EC14 /* UIViewController+Renderer.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7F49D2E8271C7CC00068EC14 /* Space */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Space;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
