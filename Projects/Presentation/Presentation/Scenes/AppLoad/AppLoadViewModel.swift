@@ -11,12 +11,11 @@ import Foundation
 public class AppLoadViewModel {
     private let useCase: LoadStationUseCase
     private let router: AppLoadRouter
-    private weak var view: Renderer?
+    public weak var view: Renderer?
     
-    public init(useCase: LoadStationUseCase, router: AppLoadRouter, view: Renderer) {
+    public init(useCase: LoadStationUseCase, router: AppLoadRouter) {
         self.useCase = useCase
         self.router = router
-        self.view = view
     }
     
     public func start() {

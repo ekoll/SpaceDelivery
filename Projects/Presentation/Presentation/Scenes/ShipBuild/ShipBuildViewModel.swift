@@ -11,13 +11,12 @@ public class ShipBuildViewModel {
     private var blueprint: SpaceshipBlueprint
     private let usecase: BuildSpaceshipUseCase
     private let router: ShipBuildRouter
-    private weak var view: Renderer?
+    public weak var view: Renderer?
     
-    public init(blueprint: SpaceshipBlueprint, usecase: BuildSpaceshipUseCase, router: ShipBuildRouter, view: Renderer? = nil) {
+    public init(blueprint: SpaceshipBlueprint, usecase: BuildSpaceshipUseCase, router: ShipBuildRouter) {
         self.blueprint = blueprint
         self.usecase = usecase
         self.router = router
-        self.view = view
     }
 }
 

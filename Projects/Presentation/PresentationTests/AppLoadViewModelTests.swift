@@ -16,7 +16,7 @@ class AppLoadViewModelTests: XCTestCase {
             XCTAssert(true)
         })
         
-        let viewModel = AppLoadViewModel(useCase: fakeLoader, router: mockRouter, view: FakeRenderer())
+        let viewModel = AppLoadViewModel(useCase: fakeLoader, router: mockRouter)
         
         viewModel.start()
     }
@@ -27,7 +27,8 @@ class AppLoadViewModelTests: XCTestCase {
             XCTAssert(true)
         })
         
-        let viewModel = AppLoadViewModel(useCase: fakeLoader, router: FakeAppLoadRouter(), view: mockView)
+        let viewModel = AppLoadViewModel(useCase: fakeLoader, router: FakeAppLoadRouter())
+        viewModel.view = mockView
         
         viewModel.start()
     }

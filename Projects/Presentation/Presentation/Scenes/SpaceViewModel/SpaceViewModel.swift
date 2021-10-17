@@ -12,16 +12,15 @@ public class SpaceViewModel {
     private let shipLocation: ShipLocation
     private let spaceUsecase: SpaceUseCase
     private let favoriteUsecase: FavoriteStationUseCase
-    private weak var view: Renderer?
+    public weak var view: Renderer?
     
     public let stations: FilterableStations
     
-    public init(spaceship: Spaceship, shipLocation: ShipLocation, stations: [SpaceStation], spaceUsecase: SpaceUseCase, favoriteUsecase: FavoriteStationUseCase, view: Renderer? = nil) {
+    public init(spaceship: Spaceship, shipLocation: ShipLocation, stations: [SpaceStation], spaceUsecase: SpaceUseCase, favoriteUsecase: FavoriteStationUseCase) {
         self.spaceship = spaceship
         self.shipLocation = shipLocation
         self.spaceUsecase = spaceUsecase
         self.favoriteUsecase = favoriteUsecase
-        self.view = view
         
         self.stations = FilterableStations(stations: stations.map { .init(station: $0, shipLocation: shipLocation) })
     }
