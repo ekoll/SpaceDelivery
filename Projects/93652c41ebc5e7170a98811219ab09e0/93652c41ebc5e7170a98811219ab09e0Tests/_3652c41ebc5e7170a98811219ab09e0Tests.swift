@@ -1,14 +1,14 @@
 //
-//  DomainTests.swift
-//  DomainTests
+//  _3652c41ebc5e7170a98811219ab09e0Tests.swift
+//  93652c41ebc5e7170a98811219ab09e0Tests
 //
-//  Created by Ekrem Duvarbasi on 16.10.2021.
+//  Created by Ekrem Duvarbasi on 17.10.2021.
 //
 
 import XCTest
-@testable import Domain
+@testable import _3652c41ebc5e7170a98811219ab09e0
 
-class DomainTests: XCTestCase {
+class _3652c41ebc5e7170a98811219ab09e0Tests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
