@@ -18,8 +18,9 @@ public class StationViewModel {
     
     public var name: String { station.name }
     public var isFavourite: Bool { station.isFavorite }
+    public var ustCostText: String { "\(station.coordinate.distance(from: shipLocation.coorditnate))UST" }
     public var capacityText: String { station.capacity.description }
-    public var stationText: String { station.stock.description }
+    public var stockText: String { station.stock.description }
     public var needText: String { station.need.description }
     
     public var operation: Operation {

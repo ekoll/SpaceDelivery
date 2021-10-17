@@ -63,6 +63,12 @@
 		7F49D2E5271C75D10068EC14 /* AlertDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2E4271C75D10068EC14 /* AlertDirector.swift */; };
 		7F49D2E6271C75D10068EC14 /* AlertDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2E4271C75D10068EC14 /* AlertDirector.swift */; };
 		7F49D2E7271C75D10068EC14 /* AlertDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2E4271C75D10068EC14 /* AlertDirector.swift */; };
+		7F49D2EB271C827C0068EC14 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2EA271C827C0068EC14 /* StationCell.xib */; };
+		7F49D2EC271C827C0068EC14 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2EA271C827C0068EC14 /* StationCell.xib */; };
+		7F49D2ED271C827C0068EC14 /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2EA271C827C0068EC14 /* StationCell.xib */; };
+		7F49D2EF271C88FB0068EC14 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2EE271C88FB0068EC14 /* StationCell.swift */; };
+		7F49D2F0271C88FB0068EC14 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2EE271C88FB0068EC14 /* StationCell.swift */; };
+		7F49D2F1271C88FB0068EC14 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2EE271C88FB0068EC14 /* StationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +132,8 @@
 		7F49D2DC271C72C00068EC14 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		7F49D2E0271C75530068EC14 /* UIViewController+Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Renderer.swift"; sourceTree = "<group>"; };
 		7F49D2E4271C75D10068EC14 /* AlertDirector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDirector.swift; sourceTree = "<group>"; };
+		7F49D2EA271C827C0068EC14 /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
+		7F49D2EE271C88FB0068EC14 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,8 +321,18 @@
 		7F49D2E8271C7CC00068EC14 /* Space */ = {
 			isa = PBXGroup;
 			children = (
+				7F49D2E9271C82650068EC14 /* SubViews */,
 			);
 			path = Space;
+			sourceTree = "<group>";
+		};
+		7F49D2E9271C82650068EC14 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F49D2EA271C827C0068EC14 /* StationCell.xib */,
+				7F49D2EE271C88FB0068EC14 /* StationCell.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +440,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F49D2EB271C827C0068EC14 /* StationCell.xib in Resources */,
 				7F242C83271C4AC1006803D2 /* LaunchScreen.storyboard in Resources */,
 				7F49D2D8271C6C940068EC14 /* ShipBuildView.xib in Resources */,
 				7F49D2BE271C5B250068EC14 /* LoadingView.xib in Resources */,
@@ -433,6 +452,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F49D2EC271C827C0068EC14 /* StationCell.xib in Resources */,
 				7F49D2BF271C5B250068EC14 /* LoadingView.xib in Resources */,
 				7F49D2D9271C6C950068EC14 /* ShipBuildView.xib in Resources */,
 			);
@@ -442,6 +462,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F49D2ED271C827C0068EC14 /* StationCell.xib in Resources */,
 				7F49D2C0271C5B250068EC14 /* LoadingView.xib in Resources */,
 				7F49D2DA271C6C950068EC14 /* ShipBuildView.xib in Resources */,
 			);
@@ -468,6 +489,7 @@
 				7F49D2B3271C59320068EC14 /* DependencyContainer.swift in Sources */,
 				7F49D2E5271C75D10068EC14 /* AlertDirector.swift in Sources */,
 				7F49D2C6271C62100068EC14 /* BaseRoouter.swift in Sources */,
+				7F49D2EF271C88FB0068EC14 /* StationCell.swift in Sources */,
 				7F242C77271C4ABF006803D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +503,7 @@
 				7F49D2D5271C6C7B0068EC14 /* ShipBuildView.swift in Sources */,
 				7F49D2E2271C75530068EC14 /* UIViewController+Renderer.swift in Sources */,
 				7F49D2B4271C59320068EC14 /* DependencyContainer.swift in Sources */,
+				7F49D2F0271C88FB0068EC14 /* StationCell.swift in Sources */,
 				7F49D2C3271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,
 				7F49D2B9271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F242C8E271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0Tests.swift in Sources */,
@@ -511,6 +534,7 @@
 				7F49D2B5271C59320068EC14 /* DependencyContainer.swift in Sources */,
 				7F49D2E7271C75D10068EC14 /* AlertDirector.swift in Sources */,
 				7F49D2C8271C62100068EC14 /* BaseRoouter.swift in Sources */,
+				7F49D2F1271C88FB0068EC14 /* StationCell.swift in Sources */,
 				7F242C9A271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
