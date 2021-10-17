@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import Domain
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let view = LoadingView(viewModel: .init(useCase: StationLoader(repository: ApiStationRepository(), favouriteRepository: InMemoryFavoriteStationRepository()), router: LoadingViewRouter()))
+        
+        window?.rootViewController = view
+        window?.makeKeyAndVisible()
         return true
     }
 }
-
