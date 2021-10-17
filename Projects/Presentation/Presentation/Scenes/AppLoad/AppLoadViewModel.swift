@@ -22,11 +22,13 @@ public class AppLoadViewModel {
         useCase.loadStations { [weak self] result in
             guard let self = self else { return }
             
-            switch result {
-            case .succes(let stations):
-                self.router.presentSpaceshipBuild(stations: stations)
-            case .error(let error):
-                self.view?.present(error: error.message)
+            DispatchQueue.main.async {
+                switch result {
+                case .succes(let stations):
+                    self.router.presentSpaceshipBuild(stations: stations)
+                case .error(let error):
+                    self.view?.present(error: error.message)
+                }
             }
         }
     }
