@@ -33,6 +33,7 @@ public struct Spaceship {
         self.durabilityTime = durabilityTime
         self.maxHealth = maxHealth
         self.coordinate = coordinate
+        self.stationName = stationName
         
         currentUST = universalSpaceTime
         currentStock = capacity
