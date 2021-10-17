@@ -46,34 +46,34 @@ public class SpaceshipBlueprint {
         self.capacity = capacity
     }
     
-    func increaseDurability() {
+    public func increaseDurability() {
         let currentLimitForAbility = maxAbilityPoints - (speed + capacity)
         durability = min(durability + 1, currentLimitForAbility)
     }
     
-    func increaseSpeed() {
+    public func increaseSpeed() {
         let currentLimitForAbility = maxAbilityPoints - (durability + capacity)
         speed = min(speed + 1, currentLimitForAbility)
     }
     
-    func increaseCapacity() {
+    public func increaseCapacity() {
         let currentLimitForAbility = maxAbilityPoints - (durability + speed)
         capacity = min(capacity + 1, currentLimitForAbility)
     }
     
-    func decreaseDurability() {
+    public func decreaseDurability() {
         durability = max(durability - 1, 0)
     }
     
-    func decreaseSpeed() {
+    public func decreaseSpeed() {
         speed = max(speed - 1, 0)
     }
     
-    func decreaseCapacity() {
+    public func decreaseCapacity() {
         capacity = max(capacity - 1, 0)
     }
     
-    func validate() throws {
+    internal func validate() throws {
         if name.isEmpty {
             throw ValidationError.emptyName
         }
