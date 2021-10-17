@@ -58,33 +58,37 @@ class SpaceshipTests: XCTestCase {
     // MARK: do damage
     func test_do_damage_not_work_when_time_do_not_come() {
         var spaceship = Spaceship(durabilityTime: 10, lastDamageReceivedTime: Date().timeIntervalSince1970)
-        spaceship.doDamage(5)
+        let result = spaceship.doDamage(5)
         
         let expectedHealth = spaceship.maxHealth
+        XCTAssertFalse(result)
         XCTAssertEqual(spaceship.currentHealth, expectedHealth)
     }
     
     func test_do_damage_works_when_time_come() {
         var spaceship = Spaceship(durabilityTime: 10, lastDamageReceivedTime: Date().timeIntervalSince1970 - 20)
-        spaceship.doDamage(5)
+        let result = spaceship.doDamage(5)
         
         let expectedHealth = spaceship.maxHealth - 5
+        XCTAssertTrue(result)
         XCTAssertEqual(spaceship.currentHealth, expectedHealth)
     }
     
     func test_do_damage_decrease_currentHealth_correctly() {
         var spaceship = Spaceship(durabilityTime: 10, maxHealth: 100, lastDamageReceivedTime: Date().timeIntervalSince1970 - 20)
-        spaceship.doDamage(5)
+        let result = spaceship.doDamage(5)
         
-        let expectedHealth = 95
+        let expectedHealth = spaceship.maxHealth - 5
+        XCTAssertTrue(result)
         XCTAssertEqual(spaceship.currentHealth, expectedHealth)
     }
     
     func test_currentHealth_does_not_fall_under_0_after_do_damage() {
         var spaceship = Spaceship(durabilityTime: 10, maxHealth: 4, lastDamageReceivedTime: Date().timeIntervalSince1970 - 20)
-        spaceship.doDamage(5)
+        let result = spaceship.doDamage(5)
         
         let expectedHealth = 0
+        XCTAssertTrue(result)
         XCTAssertEqual(spaceship.currentHealth, expectedHealth)
     }
     

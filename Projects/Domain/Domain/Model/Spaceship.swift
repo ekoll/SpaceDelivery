@@ -46,14 +46,14 @@ public struct Spaceship {
         self.stationName = name
     }
     
-    internal mutating func doDamage(_ damage: Int) {
+    internal mutating func doDamage(_ damage: Int) -> Bool {
         let now = Date().timeIntervalSince1970
-        guard now - lastDamageReceivedTime > durabilityTime else { return }
+        guard now - lastDamageReceivedTime > durabilityTime else { return false }
         
         currentHealth = max(currentHealth - damage, 0)
         lastDamageReceivedTime = now
         
-        return
+        return true
     }
     
     internal mutating func takeFromStock(_ amount: Int64) -> Int64 {

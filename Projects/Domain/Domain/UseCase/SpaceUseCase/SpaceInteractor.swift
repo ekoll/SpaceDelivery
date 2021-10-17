@@ -46,14 +46,13 @@ public class SpaceInteractor: SpaceUseCase {
         return .init(shipStatus: status, updated: (updatedShip, updatedStation))
     }
     
-    public func tryToDamage(ship: Spaceship) -> SpaceOperationResult<Spaceship> {
+    public func tryToDamage(ship: Spaceship) -> SpaceOperationResult<(ship: Spaceship, didDamage: Bool)> {
         var updatedShip = ship
-        updatedShip.doDamage(damageByTime)
+        let didDamage = updatedShip.doDamage(damageByTime)
         let status = updatedShip.goHomeIfNeeded(home: homeCoordinate, name: homeName)
         
-        return .init(shipStatus: status, updated: updatedShip)
-    }
-    
+        return .init(shipStatus: status, updated: (updatedShip, didDamage))
+    }    
 }
 
 extension SpaceInteractor {
