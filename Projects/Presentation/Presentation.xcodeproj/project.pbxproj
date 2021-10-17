@@ -13,6 +13,8 @@
 		7F5D7010271C113B00B8597B /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F5D7002271C113B00B8597B /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F5D7024271C115000B8597B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5D7023271C115000B8597B /* Domain.framework */; };
 		7F5D7025271C115000B8597B /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F5D7023271C115000B8597B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F5D7032271C1A8000B8597B /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D7031271C1A8000B8597B /* Renderer.swift */; };
+		7F5D7033271C1A8000B8597B /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D7031271C1A8000B8597B /* Renderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 		7F5D7009271C113B00B8597B /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5D700E271C113B00B8597B /* PresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationTests.swift; sourceTree = "<group>"; };
 		7F5D7023271C115000B8597B /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5D7031271C1A8000B8597B /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 		7F5D7001271C113B00B8597B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				7F5D702F271C1A4F00B8597B /* Common */,
+				7F5D7027271C190700B8597B /* Scenes */,
 				7F5D7002271C113B00B8597B /* Presentation.h */,
 				7F5D7003271C113B00B8597B /* Presentation.docc */,
 			);
@@ -110,6 +115,22 @@
 				7F5D7023271C115000B8597B /* Domain.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F5D702F271C1A4F00B8597B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D7030271C1A5400B8597B /* Componenets */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7F5D7030271C1A5400B8597B /* Componenets */ = {
+			isa = PBXGroup;
+			children = (
+				7F5D7031271C1A8000B8597B /* Renderer.swift */,
+			);
+			path = Componenets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5D7032271C1A8000B8597B /* Renderer.swift in Sources */,
 				7F5D7004271C113B00B8597B /* Presentation.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F5D7033271C1A8000B8597B /* Renderer.swift in Sources */,
 				7F5D700F271C113B00B8597B /* PresentationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +449,7 @@
 		7F5D7017271C113B00B8597B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -446,6 +470,7 @@
 		7F5D7018271C113B00B8597B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
