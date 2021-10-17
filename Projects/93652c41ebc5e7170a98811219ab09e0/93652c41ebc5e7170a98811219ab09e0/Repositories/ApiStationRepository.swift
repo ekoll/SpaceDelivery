@@ -16,9 +16,8 @@ class ApiStationRepository: StationRepository {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             switch (data, response, error) {
             case (.none, .none, .some(let error)):
-                // TODO: return error
-                print("Something happened:", error.localizedDescription)
-                break
+                completion(.error(ApiError(error: error)))
+                
             case (.some(let data), let response as HTTPURLResponse, .none):
                 switch response.statusCode {
                 case 200..<300:
@@ -27,16 +26,16 @@ class ApiStationRepository: StationRepository {
                         completion(.succes(stations))
                     }
                     catch {
-                        // TODO: return error
+                        completion(.error(ApiError(error: error)))
                         print("Error on decode server response:", error.localizedDescription)
                     }
                 default:
-                    // TODO: return error
+                    completion(.error(ApiError(message: "Unknown response returned from server")))
                     break
                 }
                 
             default:
-                // TODO: return error
+                completion(.error(ApiError(message: "Unknown response returned from server")))
                 print("something is wrong with response")
             }
         }

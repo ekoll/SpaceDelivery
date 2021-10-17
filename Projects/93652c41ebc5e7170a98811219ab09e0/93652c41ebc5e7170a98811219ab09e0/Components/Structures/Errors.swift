@@ -9,4 +9,12 @@ import Domain
 
 struct ApiError: AppError {
     var message: String
+    
+    init(message: String) {
+        self.message = message
+    }
+    
+    init(error: Error) {
+        message = error.localizedDescription
+    }
 }
