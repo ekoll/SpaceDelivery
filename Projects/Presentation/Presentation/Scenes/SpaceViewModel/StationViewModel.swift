@@ -16,8 +16,10 @@ public class StationViewModel {
         self.station = station
         self.home = home
         self.shipLocation = shipLocation
+        self.searchableName = station.name.lowercased()
     }
     
+    public var searchableName: String
     public var name: String { station.name }
     public var isFavourite: Bool { station.isFavorite }
     public var ustCostText: String { "\(Int(station.coordinate.distance(from: shipLocation.coorditnate)))UST" }

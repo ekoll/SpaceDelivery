@@ -26,6 +26,7 @@ class SpaceView: XibViewController {
     @IBOutlet weak var stationLabel: UILabel!
     
     @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -40,6 +41,22 @@ class SpaceView: XibViewController {
         super.viewDidLoad()
         tableView.register(.init(nibName: "StationCell", bundle: .main), forCellReuseIdentifier: StationCell.identifier)
         updateUI()
+    }
+    
+    // MARK: - ib aciton
+    @IBAction func tapFavorites() {
+        viewModel.stations.justFavorites.toggle()
+        favoriteButton.setImage(
+            viewModel.stations.justFavorites ? #imageLiteral(resourceName: "favorite-filled") : #imageLiteral(resourceName: "favorite"),
+            for: .normal
+        )
+        
+        tableView.reloadData()
+    }
+    
+    @IBAction func editSeachTextField() {
+        viewModel.stations.filterText = searchTextField.text
+        tableView.reloadData()
     }
 }
 
@@ -85,5 +102,10 @@ extension SpaceView: Renderer {
         
         stationLabel.text = viewModel.currentStationName
         tableView.reloadData()
+        
+        favoriteButton.setImage(
+            viewModel.stations.justFavorites ? #imageLiteral(resourceName: "favorite-filled") : #imageLiteral(resourceName: "favorite"),
+            for: .normal
+        )
     }
 }
