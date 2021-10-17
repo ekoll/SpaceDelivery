@@ -11,17 +11,17 @@ import Domain
 public class InMemoryFavoriteStationRepository: FavoriteStationRepository {
     private var stations: [FavoriteStation] = []
     
-    public func loadStations(completion: (AppResult<[FavoriteStation]>) -> Void) {
+    public func loadStations(completion: @escaping (AppResult<[FavoriteStation]>) -> Void) {
         completion(.succes(stations))
     }
     
-    public func append(station: FavoriteStation, completion: (AppError?) -> Void) {
+    public func append(station: FavoriteStation, completion: @escaping (AppError?) -> Void) {
         guard !stations.contains(station) else { return }
         stations.append(station)
         completion(nil)
     }
     
-    public func remove(station: FavoriteStation, completion: (AppError?) -> Void) {
+    public func remove(station: FavoriteStation, completion: @escaping (AppError?) -> Void) {
         stations.removeAll(where: { $0 == station })
         completion(nil)
     }

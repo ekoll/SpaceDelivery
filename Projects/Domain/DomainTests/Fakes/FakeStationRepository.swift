@@ -19,15 +19,15 @@ struct FakeFavoriteStationRepository: FavoriteStationRepository {
     var removeStation: (FavoriteStation) -> AppError? = { _ in nil }
     var updateStation: (FavoriteStation) -> Void = { _ in }
     
-    func loadStations(completion: (AppResult<[FavoriteStation]>) -> Void) {
+    func loadStations(completion: @escaping (AppResult<[FavoriteStation]>) -> Void) {
         completion(stationsResult)
     }
     
-    func append(station: FavoriteStation, completion: (AppError?) -> Void) {
+    func append(station: FavoriteStation, completion: @escaping (AppError?) -> Void) {
         completion(appendStation(station))
     }
     
-    func remove(station: FavoriteStation, completion: (AppError?) -> Void) {
+    func remove(station: FavoriteStation, completion: @escaping (AppError?) -> Void) {
         completion(removeStation(station))
     }
     
