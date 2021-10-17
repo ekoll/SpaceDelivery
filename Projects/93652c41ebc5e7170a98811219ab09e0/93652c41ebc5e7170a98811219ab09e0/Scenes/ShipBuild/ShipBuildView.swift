@@ -39,10 +39,57 @@ class ShipBuildView: XibViewController {
         super.init()
     }
     
+    // MARK: - ib actions
+    @IBAction func tapDurabilityMinus() {
+        viewModel.decreaseDurability()
+    }
+    
+    @IBAction func tapDurabilityPlus() {
+        viewModel.increaseDurability()
+    }
+    
+    @IBAction func tapSpeedMinus() {
+        viewModel.decreaseSpeed()
+    }
+    
+    @IBAction func tapSpeedPlus() {
+        viewModel.increaseSpeed()
+    }
+    
+    @IBAction func tapCapacityMinus() {
+        viewModel.decreaseCapacity()
+    }
+    
+    @IBAction func tapCapacityPlus() {
+        viewModel.increaseCapacity()
+    }
+    
+    @IBAction func tapSave() {
+        guard let text = nameTextField.text else { return }
+        viewModel.update(name: text)
+        viewModel.startGame()
+    }
 }
 
+// MARK: - renderer
 extension ShipBuildView: Renderer {
+    
     func updateUI() {
+        pointLabel.text = viewModel.availablePointText
         
+        durabilityLabel.text = viewModel.durability
+        durabilityProgressView.progress = viewModel.durabilityRatio
+        durabilityMinusButton.isEnabled = viewModel.canDecreaseDurability
+        durabilityPlusButton.isEnabled = viewModel.canIncreaseAbility
+        
+        speedLabel.text = viewModel.speed
+        speedProgressView.progress = viewModel.speedRatio
+        speedMinusButton.isEnabled = viewModel.canDecreaseSpeed
+        speedPlusButton.isEnabled = viewModel.canIncreaseAbility
+        
+        capacityLabel.text = viewModel.capacity
+        capacityProgressView.progress = viewModel.capacityRatio
+        capacityMinusButton.isEnabled = viewModel.canDecreaseCapacity
+        capacityPlusButton.isEnabled = viewModel.canIncreaseAbility
     }
 }

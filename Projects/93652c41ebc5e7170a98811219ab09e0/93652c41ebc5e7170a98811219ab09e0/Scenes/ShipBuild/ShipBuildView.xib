@@ -91,6 +91,9 @@
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                    <connections>
+                                        <action selector="tapDurabilityMinus" destination="-1" eventType="touchUpInside" id="OG4-AH-x7v"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMO-4j-rRi">
                                     <rect key="frame" x="341" y="0.5" width="33" height="33"/>
@@ -99,6 +102,9 @@
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                    <connections>
+                                        <action selector="tapDurabilityPlus" destination="-1" eventType="touchUpInside" id="OGE-zT-TFy"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -134,6 +140,9 @@
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                    <connections>
+                                        <action selector="tapSpeedMinus" destination="-1" eventType="touchUpInside" id="3pp-jx-5FF"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEn-bt-XuZ">
                                     <rect key="frame" x="341" y="0.5" width="33" height="33"/>
@@ -142,6 +151,9 @@
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                    <connections>
+                                        <action selector="tapSpeedPlus" destination="-1" eventType="touchUpInside" id="gEh-u3-wCB"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -176,6 +188,9 @@
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                    <connections>
+                                        <action selector="tapCapacityMinus" destination="-1" eventType="touchUpInside" id="gez-17-XZX"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMx-2i-lKL">
                                     <rect key="frame" x="341" y="0.5" width="33" height="33"/>
@@ -184,6 +199,9 @@
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                    <connections>
+                                        <action selector="tapCapacityPlus" destination="-1" eventType="touchUpInside" id="mr5-Da-fa0"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -200,6 +218,9 @@
                     <rect key="frame" x="143" y="509" width="128" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Craft Spaceship"/>
+                    <connections>
+                        <action selector="tapSave" destination="-1" eventType="touchUpInside" id="2pK-lo-pPT"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
