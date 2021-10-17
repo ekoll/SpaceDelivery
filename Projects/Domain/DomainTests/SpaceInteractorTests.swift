@@ -59,7 +59,7 @@ class SpaceInteractorTests: XCTestCase {
         let expectedHealth = spaceShip.currentHealth - damage
         
         XCTAssertEqual(result.shipStatus, .good)
-        XCTAssertEqual(result.updated.currentHealth, expectedHealth)
+        XCTAssertEqual(result.updated.ship.currentHealth, expectedHealth)
     }
     
     func test_ship_resets_when_healt_drop_zero() {
@@ -70,7 +70,7 @@ class SpaceInteractorTests: XCTestCase {
         
         let expectedHealth = spaceShip.maxHealth
         
-        XCTAssertEqual(result.updated.currentHealth, expectedHealth)
+        XCTAssertEqual(result.updated.ship.currentHealth, expectedHealth)
     }
     
     func test_status_is_broken_when_healt_drop_zero() {

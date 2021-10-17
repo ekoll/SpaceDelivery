@@ -8,6 +8,9 @@
 import Foundation
 
 public struct SpaceshipCraftingRules {
+    public var homeName: String = ""
+    public var homeCoordinate: Coordinate = .zero
+    
     public var maxHealth: Int = 100
     public var capacityMultiplier: Int64 = 10000
     public var universalSpaceTimeMultiplier: Int = 20

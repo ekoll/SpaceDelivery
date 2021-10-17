@@ -14,7 +14,7 @@ public class SpaceshipTechnician: BuildSpaceshipUseCase {
         self.rules = rules
     }
     
-    public func build(from blueprint: SpaceshipBlueprint, coordinate: Coordinate) throws -> Spaceship {
+    public func build(from blueprint: SpaceshipBlueprint) throws -> Spaceship {
         try blueprint.validate()
         
         return .init(
@@ -23,7 +23,8 @@ public class SpaceshipTechnician: BuildSpaceshipUseCase {
             universalSpaceTime: blueprint.speed * rules.universalSpaceTimeMultiplier,
             durabilityTime: TimeInterval(blueprint.durability) * rules.durabilityTimeMultiplier,
             maxHealth: rules.maxHealth,
-            coordinate: coordinate
+            stationName: rules.homeName,
+            coordinate: rules.homeCoordinate
         )
     }
 }
