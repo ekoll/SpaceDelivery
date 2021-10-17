@@ -34,6 +34,7 @@
 		7F5D704C271C32DA00B8597B /* ShipLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D704A271C32DA00B8597B /* ShipLocation.swift */; };
 		7F5D704E271C41CD00B8597B /* FilterableStations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D704D271C41CD00B8597B /* FilterableStations.swift */; };
 		7F5D704F271C41CD00B8597B /* FilterableStations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D704D271C41CD00B8597B /* FilterableStations.swift */; };
+		7F5D7052271C45FC00B8597B /* FilterableStationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D7050271C45FC00B8597B /* FilterableStationsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		7F5D7047271C31CA00B8597B /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
 		7F5D704A271C32DA00B8597B /* ShipLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipLocation.swift; sourceTree = "<group>"; };
 		7F5D704D271C41CD00B8597B /* FilterableStations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterableStations.swift; sourceTree = "<group>"; };
+		7F5D7050271C45FC00B8597B /* FilterableStationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterableStationsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			children = (
 				7F5D7034271C1C2F00B8597B /* Fakes */,
 				7F5D700E271C113B00B8597B /* AppLoadViewModelTests.swift */,
+				7F5D7050271C45FC00B8597B /* FilterableStationsTests.swift */,
 			);
 			path = PresentationTests;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				7F5D7046271C2FAA00B8597B /* SpaceViewModel.swift in Sources */,
 				7F5D704F271C41CD00B8597B /* FilterableStations.swift in Sources */,
 				7F5D700F271C113B00B8597B /* AppLoadViewModelTests.swift in Sources */,
+				7F5D7052271C45FC00B8597B /* FilterableStationsTests.swift in Sources */,
 				7F5D702E271C199B00B8597B /* AppLoadRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

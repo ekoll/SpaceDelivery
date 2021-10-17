@@ -11,11 +11,13 @@ class FakeRenderer: Renderer {
     var error: (String) -> Void
     var alert: (String) -> Void
     var yeNoQestion: (String) -> Bool
+    var updateUi: () -> Void
     
-    init(error: @escaping (String) -> Void = { _ in }, alert: @escaping (String) -> Void = { _ in }, yeNoQestion: @escaping (String) -> Bool = { _ in false }) {
+    init(error: @escaping (String) -> Void = { _ in }, alert: @escaping (String) -> Void = { _ in }, yeNoQestion: @escaping (String) -> Bool = { _ in false }, updateUi: @escaping () -> Void = { }) {
         self.error = error
         self.alert = alert
         self.yeNoQestion = yeNoQestion
+        self.updateUi = updateUi
     }
     
     func present(error: String) {
@@ -28,5 +30,9 @@ class FakeRenderer: Renderer {
     
     func ask(yesNoQuestion: String, completion: @escaping (Bool) -> Void) {
         completion(self.yeNoQestion(yesNoQuestion))
+    }
+    
+    func updateUI() {
+        updateUi()
     }
 }
