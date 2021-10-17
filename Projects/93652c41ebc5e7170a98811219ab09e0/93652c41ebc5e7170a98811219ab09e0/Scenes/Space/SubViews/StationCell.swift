@@ -14,6 +14,8 @@ protocol StationCellDelegate: AnyObject {
 }
 
 class StationCell: UITableViewCell {
+    static var identifier: String { "station_cell" }
+    
     weak var viewModel: StationViewModel?
     weak var delegate: StationCellDelegate?
     

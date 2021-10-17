@@ -69,6 +69,12 @@
 		7F49D2EF271C88FB0068EC14 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2EE271C88FB0068EC14 /* StationCell.swift */; };
 		7F49D2F0271C88FB0068EC14 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2EE271C88FB0068EC14 /* StationCell.swift */; };
 		7F49D2F1271C88FB0068EC14 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2EE271C88FB0068EC14 /* StationCell.swift */; };
+		7F49D2F3271C8D8B0068EC14 /* SpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2F2271C8D8B0068EC14 /* SpaceView.swift */; };
+		7F49D2F4271C8D8B0068EC14 /* SpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2F2271C8D8B0068EC14 /* SpaceView.swift */; };
+		7F49D2F5271C8D8B0068EC14 /* SpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2F2271C8D8B0068EC14 /* SpaceView.swift */; };
+		7F49D2F7271C8DED0068EC14 /* SpaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2F6271C8DED0068EC14 /* SpaceView.xib */; };
+		7F49D2F8271C8DED0068EC14 /* SpaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2F6271C8DED0068EC14 /* SpaceView.xib */; };
+		7F49D2F9271C8DED0068EC14 /* SpaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2F6271C8DED0068EC14 /* SpaceView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +140,8 @@
 		7F49D2E4271C75D10068EC14 /* AlertDirector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDirector.swift; sourceTree = "<group>"; };
 		7F49D2EA271C827C0068EC14 /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
 		7F49D2EE271C88FB0068EC14 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		7F49D2F2271C8D8B0068EC14 /* SpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceView.swift; sourceTree = "<group>"; };
+		7F49D2F6271C8DED0068EC14 /* SpaceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpaceView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				7F49D2E9271C82650068EC14 /* SubViews */,
+				7F49D2F6271C8DED0068EC14 /* SpaceView.xib */,
+				7F49D2F2271C8D8B0068EC14 /* SpaceView.swift */,
 			);
 			path = Space;
 			sourceTree = "<group>";
@@ -441,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F49D2EB271C827C0068EC14 /* StationCell.xib in Resources */,
+				7F49D2F7271C8DED0068EC14 /* SpaceView.xib in Resources */,
 				7F242C83271C4AC1006803D2 /* LaunchScreen.storyboard in Resources */,
 				7F49D2D8271C6C940068EC14 /* ShipBuildView.xib in Resources */,
 				7F49D2BE271C5B250068EC14 /* LoadingView.xib in Resources */,
@@ -453,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F49D2EC271C827C0068EC14 /* StationCell.xib in Resources */,
+				7F49D2F8271C8DED0068EC14 /* SpaceView.xib in Resources */,
 				7F49D2BF271C5B250068EC14 /* LoadingView.xib in Resources */,
 				7F49D2D9271C6C950068EC14 /* ShipBuildView.xib in Resources */,
 			);
@@ -463,6 +475,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F49D2ED271C827C0068EC14 /* StationCell.xib in Resources */,
+				7F49D2F9271C8DED0068EC14 /* SpaceView.xib in Resources */,
 				7F49D2C0271C5B250068EC14 /* LoadingView.xib in Resources */,
 				7F49D2DA271C6C950068EC14 /* ShipBuildView.xib in Resources */,
 			);
@@ -490,6 +503,7 @@
 				7F49D2E5271C75D10068EC14 /* AlertDirector.swift in Sources */,
 				7F49D2C6271C62100068EC14 /* BaseRoouter.swift in Sources */,
 				7F49D2EF271C88FB0068EC14 /* StationCell.swift in Sources */,
+				7F49D2F3271C8D8B0068EC14 /* SpaceView.swift in Sources */,
 				7F242C77271C4ABF006803D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F49D2CC271C65C90068EC14 /* HomeStation.swift in Sources */,
+				7F49D2F4271C8D8B0068EC14 /* SpaceView.swift in Sources */,
 				7F49D2AF271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
 				7F49D2D5271C6C7B0068EC14 /* ShipBuildView.swift in Sources */,
 				7F49D2E2271C75530068EC14 /* UIViewController+Renderer.swift in Sources */,
@@ -535,6 +550,7 @@
 				7F49D2E7271C75D10068EC14 /* AlertDirector.swift in Sources */,
 				7F49D2C8271C62100068EC14 /* BaseRoouter.swift in Sources */,
 				7F49D2F1271C88FB0068EC14 /* StationCell.swift in Sources */,
+				7F49D2F5271C8D8B0068EC14 /* SpaceView.swift in Sources */,
 				7F242C9A271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
