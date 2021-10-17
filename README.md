@@ -24,7 +24,7 @@ Built with very bad type of MVVM. Instead of a observation strategy, there is a 
 
 I just did not wanted to add whole a framework that came with a programming paradigm(Reactive Programming) that is followed to solve problems like operation packaging and state transfer, to just for... binding.
 
-### So why you did not do a basic version of Rx observables to solve binding problem
+### So why you did not make a basic version of Rx observables to solve binding problem
 
 I did not have enough time to do this
 
