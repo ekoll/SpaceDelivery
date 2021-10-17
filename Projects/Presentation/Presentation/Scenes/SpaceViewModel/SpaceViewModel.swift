@@ -62,7 +62,7 @@ extension SpaceViewModel {
             case .travel:
                 try travel(to: station.station)
             case .deploy:
-                break
+                try deploy(to: station)
             case .nothing:
                 return
             }
@@ -78,7 +78,8 @@ extension SpaceViewModel {
     
     public func tryToDamage() {
         let result = spaceUsecase.tryToDamage(ship: spaceship)
-        spaceship = result.updated
+        guard result.updated.didDamage else { return }
+        spaceship = result.updated.ship
         
         view?.updateUI()
         warnViewIfNeeded(forShipStatus: result.shipStatus)
@@ -111,7 +112,7 @@ private extension SpaceViewModel {
         let result = try spaceUsecase.move(ship: spaceship, to: station)
         spaceship = result.updated
         shipLocation.coorditnate = spaceship.coordinate
-        shipLocation.name = spaceship.name
+        shipLocation.name = spaceship.stationName
         
         view?.updateUI()
         warnViewIfNeeded(forShipStatus: result.shipStatus)
