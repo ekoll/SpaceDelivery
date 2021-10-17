@@ -40,3 +40,21 @@ class ShipBuildView: XibViewController {
     }
     
 }
+
+extension ShipBuildView: Renderer {
+    func updateUI() {
+        
+    }
+    
+    func present(error: String) {
+        
+    }
+    
+    func present(alert: String) {
+        
+    }
+    
+    func ask(yesNoQuestion: String, completion: @escaping (Bool) -> Void) {
+        
+    }    
+}

@@ -7,9 +7,11 @@
 
 import Domain
 import Presentation
+import UIKit
 
 class LoadingViewRouter: BaseRouter, AppLoadRouter {
     func presentSpaceshipBuild(stations: [SpaceStation]) {
+        guard let controller = UIApplication.shared.getTopViewController() else { return }
         let home = getHome(from: stations)
         
         let container = generateContainer(home: home)
@@ -17,7 +19,12 @@ class LoadingViewRouter: BaseRouter, AppLoadRouter {
         container.append(type: [SpaceStation].self, generator: { _ in stations })
         
         let viewModel: ShipBuildViewModel = container.resolve()
-        print("Shipname:", viewModel.name)
+        let view: ShipBuildView = ShipBuildView(viewModel: viewModel)
+        viewModel.view = view
+        
+        view.modalPresentationStyle = .fullScreen
+        view.modalTransitionStyle = .crossDissolve
+        controller.present(view, animated: true)
     }
     
     private func getHome(from stations: [SpaceStation]) -> HomeStation {

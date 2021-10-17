@@ -54,6 +54,9 @@
 		7F49D2D8271C6C940068EC14 /* ShipBuildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2D7271C6C940068EC14 /* ShipBuildView.xib */; };
 		7F49D2D9271C6C950068EC14 /* ShipBuildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2D7271C6C940068EC14 /* ShipBuildView.xib */; };
 		7F49D2DA271C6C950068EC14 /* ShipBuildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2D7271C6C940068EC14 /* ShipBuildView.xib */; };
+		7F49D2DD271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2DC271C72C00068EC14 /* UIApplicationExtensions.swift */; };
+		7F49D2DE271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2DC271C72C00068EC14 /* UIApplicationExtensions.swift */; };
+		7F49D2DF271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2DC271C72C00068EC14 /* UIApplicationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +117,7 @@
 		7F49D2CF271C67850068EC14 /* ShipBuildViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipBuildViewRouter.swift; sourceTree = "<group>"; };
 		7F49D2D3271C6C7B0068EC14 /* ShipBuildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipBuildView.swift; sourceTree = "<group>"; };
 		7F49D2D7271C6C940068EC14 /* ShipBuildView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShipBuildView.xib; sourceTree = "<group>"; };
+		7F49D2DC271C72C00068EC14 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,7 @@
 		7F49D2A7271C56A70068EC14 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7F49D2DB271C72AF0068EC14 /* Extensions */,
 				7F49D2B6271C5A4D0068EC14 /* UI */,
 				7F49D2B1271C59220068EC14 /* Tools */,
 				7F49D2A8271C56AF0068EC14 /* Structures */,
@@ -284,6 +289,14 @@
 				7F49D2D3271C6C7B0068EC14 /* ShipBuildView.swift */,
 			);
 			path = ShipBuild;
+			sourceTree = "<group>";
+		};
+		7F49D2DB271C72AF0068EC14 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F49D2DC271C72C00068EC14 /* UIApplicationExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +445,7 @@
 				7F49D2AE271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
 				7F49D2C2271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,
 				7F242C7B271C4ABF006803D2 /* LoadingView.swift in Sources */,
+				7F49D2DD271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */,
 				7F49D2B3271C59320068EC14 /* DependencyContainer.swift in Sources */,
 				7F49D2C6271C62100068EC14 /* BaseRoouter.swift in Sources */,
 				7F242C77271C4ABF006803D2 /* AppDelegate.swift in Sources */,
@@ -453,6 +467,7 @@
 				7F49D2C7271C62100068EC14 /* BaseRoouter.swift in Sources */,
 				7F49D2AB271C56C10068EC14 /* Errors.swift in Sources */,
 				7F49D2A5271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
+				7F49D2DE271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +484,7 @@
 				7F49D2B0271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
 				7F49D2C4271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,
 				7F242C98271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITests.swift in Sources */,
+				7F49D2DF271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */,
 				7F49D2B5271C59320068EC14 /* DependencyContainer.swift in Sources */,
 				7F49D2C8271C62100068EC14 /* BaseRoouter.swift in Sources */,
 				7F242C9A271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITestsLaunchTests.swift in Sources */,

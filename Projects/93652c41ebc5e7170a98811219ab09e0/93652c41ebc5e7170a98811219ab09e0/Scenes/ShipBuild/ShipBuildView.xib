@@ -25,6 +25,7 @@
                 <outlet property="speedMinusButton" destination="S5w-CT-WbG" id="TG2-nD-owy"/>
                 <outlet property="speedPlusButton" destination="gEn-bt-XuZ" id="iP7-ip-0wG"/>
                 <outlet property="speedProgressView" destination="FVH-C1-oik" id="ncj-Jl-d0J"/>
+                <outlet property="view" destination="iN0-l3-epB" id="oc5-ju-mYI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
