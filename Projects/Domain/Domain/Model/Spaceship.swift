@@ -21,6 +21,11 @@ public struct Spaceship {
     private(set) public var currentHealth: Int
     private(set) public var lastDamageReceivedTime: TimeInterval
     
+    public var remainingTimeToDamage: TimeInterval {
+        let elapsedTime = Date().timeIntervalSince1970 - lastDamageReceivedTime
+        return durabilityTime - elapsedTime
+    }
+    
     internal init(name: String = "", capacity: Int64 = 0, universalSpaceTime: Int = 0, durabilityTime: TimeInterval = 0, maxHealth: Int = 100, stationName: String = "", coordinate: Coordinate = .zero, lastDamageReceivedTime: TimeInterval = Date().timeIntervalSince1970) {
         self.name = name
         self.capacity = capacity
@@ -28,6 +33,7 @@ public struct Spaceship {
         self.durabilityTime = durabilityTime
         self.maxHealth = maxHealth
         self.coordinate = coordinate
+        self.stationName = stationName
         
         currentUST = universalSpaceTime
         currentStock = capacity

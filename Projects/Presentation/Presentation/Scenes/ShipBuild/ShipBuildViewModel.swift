@@ -11,13 +11,12 @@ public class ShipBuildViewModel {
     private var blueprint: SpaceshipBlueprint
     private let usecase: BuildSpaceshipUseCase
     private let router: ShipBuildRouter
-    private weak var view: Renderer?
+    public weak var view: Renderer?
     
-    public init(blueprint: SpaceshipBlueprint, usecase: BuildSpaceshipUseCase, router: ShipBuildRouter, view: Renderer? = nil) {
+    public init(blueprint: SpaceshipBlueprint, usecase: BuildSpaceshipUseCase, router: ShipBuildRouter) {
         self.blueprint = blueprint
         self.usecase = usecase
         self.router = router
-        self.view = view
     }
 }
 
@@ -79,14 +78,19 @@ extension ShipBuildViewModel {
     
     public var name: String { blueprint.name }
     
-    public var capacity: Int { blueprint.capacity }
-    public var capacityRatio: Double { Double(blueprint.capacity) / Double(blueprint.maxAbilityPoints) }
+    public var capacity: String { blueprint.capacity.description }
+    public var capacityRatio: Float { Float(blueprint.capacity) / Float(blueprint.maxAbilityPoints) }
+    public var canDecreaseCapacity: Bool { blueprint.capacity > 0 }
     
-    public var speed: Int { blueprint.speed }
-    public var speedRatio: Double { Double(blueprint.speed) / Double(blueprint.maxAbilityPoints) }
+    public var speed: String { blueprint.speed.description }
+    public var speedRatio: Float { Float(blueprint.speed) / Float(blueprint.maxAbilityPoints) }
+    public var canDecreaseSpeed: Bool { blueprint.speed > 0 }
     
-    public var durability: Int { blueprint.durability }
-    public var durabilityRatio: Double { Double(blueprint.durability) / Double(blueprint.maxAbilityPoints) }
+    public var durability: String { blueprint.durability.description }
+    public var durabilityRatio: Float { Float(blueprint.durability) / Float(blueprint.maxAbilityPoints) }
+    public var canDecreaseDurability: Bool { blueprint.durability > 0 }
+    
+    public var canIncreaseAbility: Bool { availabelPoint > 0 }
 }
 
 // MARK: - private computations

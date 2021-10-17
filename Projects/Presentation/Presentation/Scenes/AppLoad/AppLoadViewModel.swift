@@ -11,23 +11,24 @@ import Foundation
 public class AppLoadViewModel {
     private let useCase: LoadStationUseCase
     private let router: AppLoadRouter
-    private weak var view: Renderer?
+    public weak var view: Renderer?
     
-    public init(useCase: LoadStationUseCase, router: AppLoadRouter, view: Renderer) {
+    public init(useCase: LoadStationUseCase, router: AppLoadRouter) {
         self.useCase = useCase
         self.router = router
-        self.view = view
     }
     
     public func start() {
         useCase.loadStations { [weak self] result in
             guard let self = self else { return }
             
-            switch result {
-            case .succes(let stations):
-                self.router.presentSpaceshipBuild(stations: stations)
-            case .error(let error):
-                self.view?.present(error: error.message)
+            DispatchQueue.main.async {
+                switch result {
+                case .succes(let stations):
+                    self.router.presentSpaceshipBuild(stations: stations)
+                case .error(let error):
+                    self.view?.present(error: error.message)
+                }
             }
         }
     }

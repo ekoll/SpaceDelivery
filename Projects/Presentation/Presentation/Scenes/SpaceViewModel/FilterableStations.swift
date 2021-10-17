@@ -10,7 +10,10 @@ public class FilterableStations {
     private var filtered: [StationViewModel] = []
     
     public var filterText: String? {
-        didSet { updateFilter() }
+        didSet {
+            filterText = filterText?.lowercased()
+            updateFilter()
+        }
     }
     
     public var justFavorites: Bool = false {
@@ -34,7 +37,7 @@ private extension FilterableStations {
         
         if let text = filterText, !text.isEmpty {
             filtered = stations.filter {
-                !(!$0.isFavourite && justFavorites) && $0.name.contains(text)
+                !(!$0.isFavourite && justFavorites) && $0.searchableName.contains(text)
             }
             return
         }

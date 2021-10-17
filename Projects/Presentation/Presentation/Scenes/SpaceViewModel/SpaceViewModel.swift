@@ -9,21 +9,22 @@ import Domain
 
 public class SpaceViewModel {
     private var spaceship: Spaceship
-    private let shipLocation: ShipLocation
+    private let home: Location
+    private let shipLocation: Location
     private let spaceUsecase: SpaceUseCase
     private let favoriteUsecase: FavoriteStationUseCase
-    private weak var view: Renderer?
+    public weak var view: Renderer?
     
     public let stations: FilterableStations
     
-    public init(spaceship: Spaceship, shipLocation: ShipLocation, stations: [SpaceStation], spaceUsecase: SpaceUseCase, favoriteUsecase: FavoriteStationUseCase, view: Renderer? = nil) {
+    public init(spaceship: Spaceship, home: Location, shipLocation: Location, stations: [SpaceStation], spaceUsecase: SpaceUseCase, favoriteUsecase: FavoriteStationUseCase) {
         self.spaceship = spaceship
+        self.home = home
         self.shipLocation = shipLocation
         self.spaceUsecase = spaceUsecase
         self.favoriteUsecase = favoriteUsecase
-        self.view = view
         
-        self.stations = FilterableStations(stations: stations.map { .init(station: $0, shipLocation: shipLocation) })
+        self.stations = FilterableStations(stations: stations.map { .init(station: $0, home: home, shipLocation: shipLocation) })
     }
 }
 
@@ -41,12 +42,24 @@ extension SpaceViewModel {
         Int64(spaceship.durabilityTime * 1000).description
     }
     
+    public var shipname: String {
+        spaceship.name
+    }
+    
     public var healthText: String {
         "\(spaceship.currentHealth)/\(spaceship.maxHealth)"
     }
     
-    public var healthRation: Double {
-        Double(spaceship.currentHealth) / Double(spaceship.maxHealth)
+    public var healthRatio: Float {
+        Float(spaceship.currentHealth) / Float(spaceship.maxHealth)
+    }
+
+    public var remainingSecondsToDamageText: String {
+        Int64(spaceship.remainingTimeToDamage).description
+    }
+    
+    public var currentStationName: String {
+        spaceship.stationName
     }
 }
 

@@ -9,18 +9,24 @@ import Domain
 
 public class StationViewModel {
     internal var station: SpaceStation
-    internal var shipLocation: ShipLocation
+    internal var home: Location
+    internal var shipLocation: Location
     
-    internal init(station: SpaceStation, shipLocation: ShipLocation) {
+    internal init(station: SpaceStation, home: Location, shipLocation: Location) {
         self.station = station
+        self.home = home
         self.shipLocation = shipLocation
+        self.searchableName = station.name.lowercased()
     }
     
+    public var searchableName: String
     public var name: String { station.name }
     public var isFavourite: Bool { station.isFavorite }
+    public var ustCostText: String { "\(Int(station.coordinate.distance(from: shipLocation.coorditnate)))UST" }
     public var capacityText: String { station.capacity.description }
-    public var stationText: String { station.stock.description }
+    public var stockText: String { station.stock.description }
     public var needText: String { station.need.description }
+    public var distanceToHome: String { "\(Int(station.coordinate.distance(from: shipLocation.coorditnate)))UST" }
     
     public var operation: Operation {
         guard station.coordinate == shipLocation.coorditnate else {
