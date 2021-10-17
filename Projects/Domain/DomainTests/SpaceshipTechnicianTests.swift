@@ -14,29 +14,29 @@ class SpaceshipTechnicianTests: XCTestCase {
         let blueprint = SpaceshipBlueprint(name: "")
         let technician = SpaceshipTechnician(rules: .init())
         
-        XCTAssertThrowsError(try technician.build(from: blueprint, coordinate: .init(x: 0, y: 0)))
+        XCTAssertThrowsError(try technician.build(from: blueprint))
     }
     
     func test_craft_when_blueprint_stats_invalid() throws {
         let blueprint = try SpaceshipBlueprint(name: "a_valid_name", maxAbilityPoints: 10, durability: 4, speed: 3, capacity: 2)
         let technician = SpaceshipTechnician(rules: .init())
         
-        XCTAssertThrowsError(try technician.build(from: blueprint, coordinate: .init(x: 0, y: 0)))
+        XCTAssertThrowsError(try technician.build(from: blueprint))
     }
     
     func test_craft_with_valid_blueprint() throws {
         let blueprint = try SpaceshipBlueprint(name: "a_valid_name", maxAbilityPoints: 10, durability: 4, speed: 3, capacity: 3)
         let technician = SpaceshipTechnician(rules: .init())
         
-        XCTAssertNoThrow(try technician.build(from: blueprint, coordinate: .init(x: 0, y: 0)))
+        XCTAssertNoThrow(try technician.build(from: blueprint))
     }
     
     func test_spaceship_coordinate_is_given() throws {
         let blueprint = SpaceshipBlueprint(name: "a_valid_name")
         let expedtedCoordinate = Coordinate(x: 5, y: 2)
         
-        let technician = SpaceshipTechnician(rules: .init())
-        let spaceship = try technician.build(from: blueprint, coordinate: expedtedCoordinate)
+        let technician = SpaceshipTechnician(rules: .init(home: expedtedCoordinate))
+        let spaceship = try technician.build(from: blueprint)
         
         XCTAssertEqual(spaceship.coordinate, expedtedCoordinate)
     }
@@ -47,7 +47,7 @@ class SpaceshipTechnicianTests: XCTestCase {
         let rules = SpaceshipCraftingRules(maxHealth: expectedHealth)
         let technician = SpaceshipTechnician(rules: rules)
         
-        let ship = try technician.build(from: blueprint, coordinate: .zero)
+        let ship = try technician.build(from: blueprint)
         
         XCTAssertEqual(ship.maxHealth, expectedHealth)
     }
@@ -58,7 +58,7 @@ class SpaceshipTechnicianTests: XCTestCase {
         let rules = SpaceshipCraftingRules(capacityMultiplier: 10000)
         let technician = SpaceshipTechnician(rules: rules)
         
-        let ship = try technician.build(from: blueprint, coordinate: .zero)
+        let ship = try technician.build(from: blueprint)
         
         XCTAssertEqual(ship.capacity, expectedCapacity)
     }
@@ -69,7 +69,7 @@ class SpaceshipTechnicianTests: XCTestCase {
         let rules = SpaceshipCraftingRules(universalSpaceTimeMultiplier: 20)
         let technician = SpaceshipTechnician(rules: rules)
         
-        let ship = try technician.build(from: blueprint, coordinate: .zero)
+        let ship = try technician.build(from: blueprint)
         
         XCTAssertEqual(ship.universalSpaceTime, expectedUniversalSpaceTime)
     }
@@ -80,7 +80,7 @@ class SpaceshipTechnicianTests: XCTestCase {
         let rules = SpaceshipCraftingRules(durabilityTimeMultiplier: 10)
         let technician = SpaceshipTechnician(rules: rules)
         
-        let ship = try technician.build(from: blueprint, coordinate: .zero)
+        let ship = try technician.build(from: blueprint)
         
         XCTAssertEqual(ship.durabilityTime, expectedDurabilityTime)
     }
@@ -90,18 +90,8 @@ class SpaceshipTechnicianTests: XCTestCase {
         let blueprint = SpaceshipBlueprint(name: expectedName)
         let technician = SpaceshipTechnician(rules: .init())
         
-        let ship = try technician.build(from: blueprint, coordinate: .zero)
+        let ship = try technician.build(from: blueprint)
         
         XCTAssertEqual(ship.name, expectedName)
-    }
-    
-    func test_spaceship_coordinate() throws {
-        let expectedCoordinate = Coordinate(x: 5, y: 4)
-        let blueprint = SpaceshipBlueprint(name: "a_valid_name")
-        let technician = SpaceshipTechnician(rules: .init())
-        
-        let ship = try technician.build(from: blueprint, coordinate: expectedCoordinate)
-        
-        XCTAssertEqual(ship.coordinate, expectedCoordinate)
     }
 }
