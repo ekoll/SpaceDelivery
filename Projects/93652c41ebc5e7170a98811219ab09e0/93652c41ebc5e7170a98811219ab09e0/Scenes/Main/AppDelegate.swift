@@ -15,12 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let container = baseContainer
-        let view: LoadingView = container.resolve()
         
-        window?.rootViewController = view
+        window?.rootViewController = mainView
         window?.makeKeyAndVisible()
         return true
+    }
+    
+    var mainView: UIViewController {
+        let container = baseContainer
+        let viewModel = AppLoadViewModel(useCase: container.resolve(), router: container.resolve())
+        let view: LoadingView = .init(viewModel: viewModel)
+        
+        viewModel.view = view
+        
+        return view
     }
     
     var baseContainer: DependencyContainer {
@@ -31,8 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         container.append(type: LoadStationUseCase.self) { cont in
             StationLoader(repository: cont.resolve(), favouriteRepository: cont.resolve())
         }
-        container.append(type: AppLoadViewModel.self) { cont in .init(useCase: cont.resolve(), router: cont.resolve()) }
-        container.append(type: LoadingView.self, generator: { cont in .init(viewModel: cont.resolve()) })
         
         return container
     }

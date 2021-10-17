@@ -20,3 +20,14 @@ class LoadingView: XibViewController {
         viewModel.start()
     }
 }
+
+extension LoadingView: Renderer {
+    
+    func present(error: String) {
+        let alert = AlertDirector.alert(message: error) {
+            exit(0)
+        }
+        
+        present(alert, animated: true)
+    }
+}
