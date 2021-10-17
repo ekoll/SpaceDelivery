@@ -55,7 +55,7 @@ extension SpaceViewModel {
     }
 
     public var remainingSecondsToDamageText: String {
-        Int64(spaceship.remainintTimeToDamage).description
+        Int64(spaceship.remainingTimeToDamage).description
     }
     
     public var currentStationName: String {

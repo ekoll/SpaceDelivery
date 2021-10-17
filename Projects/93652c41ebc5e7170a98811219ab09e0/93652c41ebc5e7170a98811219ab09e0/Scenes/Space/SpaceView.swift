@@ -30,6 +30,8 @@ class SpaceView: XibViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var damageTimer: Timer?
+    
     // MARK: - init
     init(viewModel: SpaceViewModel) {
         self.viewModel = viewModel
@@ -41,6 +43,14 @@ class SpaceView: XibViewController {
         super.viewDidLoad()
         tableView.register(.init(nibName: "StationCell", bundle: .main), forCellReuseIdentifier: StationCell.identifier)
         updateUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        damageTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(timerTick), userInfo: nibName, repeats: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        damageTimer?.invalidate()
     }
     
     // MARK: - ib aciton
@@ -57,6 +67,11 @@ class SpaceView: XibViewController {
     @IBAction func editSeachTextField() {
         viewModel.stations.filterText = searchTextField.text
         tableView.reloadData()
+    }
+    
+    @objc func timerTick(_ timer: Timer) {
+        viewModel.tryToDamage()
+        remainingSecondsLabel.text = viewModel.remainingSecondsToDamageText
     }
 }
 
