@@ -23,6 +23,7 @@ public class InMemoryFavoriteStationRepository: FavoriteStationRepository {
     
     public func remove(station: FavoriteStation, completion: (AppError?) -> Void) {
         stations.removeAll(where: { $0 == station })
+        completion(nil)
     }
     
     public func update(station: FavoriteStation) {
