@@ -57,6 +57,12 @@
 		7F49D2DD271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2DC271C72C00068EC14 /* UIApplicationExtensions.swift */; };
 		7F49D2DE271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2DC271C72C00068EC14 /* UIApplicationExtensions.swift */; };
 		7F49D2DF271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2DC271C72C00068EC14 /* UIApplicationExtensions.swift */; };
+		7F49D2E1271C75530068EC14 /* UIViewController+Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2E0271C75530068EC14 /* UIViewController+Renderer.swift */; };
+		7F49D2E2271C75530068EC14 /* UIViewController+Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2E0271C75530068EC14 /* UIViewController+Renderer.swift */; };
+		7F49D2E3271C75530068EC14 /* UIViewController+Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2E0271C75530068EC14 /* UIViewController+Renderer.swift */; };
+		7F49D2E5271C75D10068EC14 /* AlertDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2E4271C75D10068EC14 /* AlertDirector.swift */; };
+		7F49D2E6271C75D10068EC14 /* AlertDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2E4271C75D10068EC14 /* AlertDirector.swift */; };
+		7F49D2E7271C75D10068EC14 /* AlertDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2E4271C75D10068EC14 /* AlertDirector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +124,8 @@
 		7F49D2D3271C6C7B0068EC14 /* ShipBuildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipBuildView.swift; sourceTree = "<group>"; };
 		7F49D2D7271C6C940068EC14 /* ShipBuildView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShipBuildView.xib; sourceTree = "<group>"; };
 		7F49D2DC271C72C00068EC14 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
+		7F49D2E0271C75530068EC14 /* UIViewController+Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Renderer.swift"; sourceTree = "<group>"; };
+		7F49D2E4271C75D10068EC14 /* AlertDirector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDirector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +248,7 @@
 			children = (
 				7F49D2B2271C59320068EC14 /* DependencyContainer.swift */,
 				7F49D2C5271C62100068EC14 /* BaseRoouter.swift */,
+				7F49D2E4271C75D10068EC14 /* AlertDirector.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -295,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				7F49D2DC271C72C00068EC14 /* UIApplicationExtensions.swift */,
+				7F49D2E0271C75530068EC14 /* UIViewController+Renderer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -437,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F49D2AA271C56C10068EC14 /* Errors.swift in Sources */,
+				7F49D2E1271C75530068EC14 /* UIViewController+Renderer.swift in Sources */,
 				7F49D2A4271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
 				7F49D2D0271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */,
 				7F49D2B8271C5A620068EC14 /* XibViewController.swift in Sources */,
@@ -447,6 +458,7 @@
 				7F242C7B271C4ABF006803D2 /* LoadingView.swift in Sources */,
 				7F49D2DD271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */,
 				7F49D2B3271C59320068EC14 /* DependencyContainer.swift in Sources */,
+				7F49D2E5271C75D10068EC14 /* AlertDirector.swift in Sources */,
 				7F49D2C6271C62100068EC14 /* BaseRoouter.swift in Sources */,
 				7F242C77271C4ABF006803D2 /* AppDelegate.swift in Sources */,
 			);
@@ -459,12 +471,14 @@
 				7F49D2CC271C65C90068EC14 /* HomeStation.swift in Sources */,
 				7F49D2AF271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
 				7F49D2D5271C6C7B0068EC14 /* ShipBuildView.swift in Sources */,
+				7F49D2E2271C75530068EC14 /* UIViewController+Renderer.swift in Sources */,
 				7F49D2B4271C59320068EC14 /* DependencyContainer.swift in Sources */,
 				7F49D2C3271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,
 				7F49D2B9271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F242C8E271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0Tests.swift in Sources */,
 				7F49D2D1271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */,
 				7F49D2C7271C62100068EC14 /* BaseRoouter.swift in Sources */,
+				7F49D2E6271C75D10068EC14 /* AlertDirector.swift in Sources */,
 				7F49D2AB271C56C10068EC14 /* Errors.swift in Sources */,
 				7F49D2A5271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
 				7F49D2DE271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */,
@@ -476,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F49D2AC271C56C10068EC14 /* Errors.swift in Sources */,
+				7F49D2E3271C75530068EC14 /* UIViewController+Renderer.swift in Sources */,
 				7F49D2A6271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
 				7F49D2D2271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */,
 				7F49D2BA271C5A620068EC14 /* XibViewController.swift in Sources */,
@@ -486,6 +501,7 @@
 				7F242C98271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITests.swift in Sources */,
 				7F49D2DF271C72C00068EC14 /* UIApplicationExtensions.swift in Sources */,
 				7F49D2B5271C59320068EC14 /* DependencyContainer.swift in Sources */,
+				7F49D2E7271C75D10068EC14 /* AlertDirector.swift in Sources */,
 				7F49D2C8271C62100068EC14 /* BaseRoouter.swift in Sources */,
 				7F242C9A271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITestsLaunchTests.swift in Sources */,
 			);
