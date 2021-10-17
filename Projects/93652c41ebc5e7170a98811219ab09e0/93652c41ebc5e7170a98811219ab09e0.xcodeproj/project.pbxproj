@@ -19,6 +19,9 @@
 		7F49D29D271C4B200068EC14 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F49D29A271C4B200068EC14 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7F49D29E271C4B200068EC14 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F49D29B271C4B200068EC14 /* Presentation.framework */; };
 		7F49D29F271C4B200068EC14 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7F49D29B271C4B200068EC14 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F49D2A4271C521F0068EC14 /* ApiStationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2A3271C521F0068EC14 /* ApiStationRepository.swift */; };
+		7F49D2A5271C521F0068EC14 /* ApiStationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2A3271C521F0068EC14 /* ApiStationRepository.swift */; };
+		7F49D2A6271C521F0068EC14 /* ApiStationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2A3271C521F0068EC14 /* ApiStationRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,7 @@
 		7F242C99271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _3652c41ebc5e7170a98811219ab09e0UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7F49D29A271C4B200068EC14 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F49D29B271C4B200068EC14 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F49D2A3271C521F0068EC14 /* ApiStationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStationRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,7 @@
 		7F242C75271C4ABF006803D2 /* 93652c41ebc5e7170a98811219ab09e0 */ = {
 			isa = PBXGroup;
 			children = (
+				7F49D2A2271C51FB0068EC14 /* Repositories */,
 				7F242C76271C4ABF006803D2 /* AppDelegate.swift */,
 				7F242C7A271C4ABF006803D2 /* ViewController.swift */,
 				7F242C7C271C4ABF006803D2 /* Main.storyboard */,
@@ -155,6 +160,14 @@
 				7F49D29B271C4B200068EC14 /* Presentation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F49D2A2271C51FB0068EC14 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				7F49D2A3271C521F0068EC14 /* ApiStationRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F49D2A4271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
 				7F242C7B271C4ABF006803D2 /* ViewController.swift in Sources */,
 				7F242C77271C4ABF006803D2 /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F242C8E271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0Tests.swift in Sources */,
+				7F49D2A5271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F49D2A6271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
 				7F242C98271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITests.swift in Sources */,
 				7F242C9A271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITestsLaunchTests.swift in Sources */,
 			);
