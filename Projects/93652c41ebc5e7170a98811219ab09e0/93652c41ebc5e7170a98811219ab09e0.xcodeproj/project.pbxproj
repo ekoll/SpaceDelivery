@@ -45,6 +45,9 @@
 		7F49D2CB271C65C90068EC14 /* HomeStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2CA271C65C90068EC14 /* HomeStation.swift */; };
 		7F49D2CC271C65C90068EC14 /* HomeStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2CA271C65C90068EC14 /* HomeStation.swift */; };
 		7F49D2CD271C65C90068EC14 /* HomeStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2CA271C65C90068EC14 /* HomeStation.swift */; };
+		7F49D2D0271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2CF271C67850068EC14 /* ShipBuildViewRouter.swift */; };
+		7F49D2D1271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2CF271C67850068EC14 /* ShipBuildViewRouter.swift */; };
+		7F49D2D2271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2CF271C67850068EC14 /* ShipBuildViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +105,7 @@
 		7F49D2C1271C60FB0068EC14 /* LoadingViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewRouter.swift; sourceTree = "<group>"; };
 		7F49D2C5271C62100068EC14 /* BaseRoouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoouter.swift; sourceTree = "<group>"; };
 		7F49D2CA271C65C90068EC14 /* HomeStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStation.swift; sourceTree = "<group>"; };
+		7F49D2CF271C67850068EC14 /* ShipBuildViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipBuildViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +244,7 @@
 			children = (
 				7F49D2C9271C62730068EC14 /* Main */,
 				7F49D2BC271C5AD70068EC14 /* Loading */,
+				7F49D2CE271C67700068EC14 /* ShipBuild */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -261,6 +266,14 @@
 				7F242C76271C4ABF006803D2 /* AppDelegate.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		7F49D2CE271C67700068EC14 /* ShipBuild */ = {
+			isa = PBXGroup;
+			children = (
+				7F49D2CF271C67850068EC14 /* ShipBuildViewRouter.swift */,
+			);
+			path = ShipBuild;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +412,7 @@
 			files = (
 				7F49D2AA271C56C10068EC14 /* Errors.swift in Sources */,
 				7F49D2A4271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
+				7F49D2D0271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */,
 				7F49D2B8271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F49D2CB271C65C90068EC14 /* HomeStation.swift in Sources */,
 				7F49D2AE271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
@@ -420,6 +434,7 @@
 				7F49D2C3271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,
 				7F49D2B9271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F242C8E271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0Tests.swift in Sources */,
+				7F49D2D1271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */,
 				7F49D2C7271C62100068EC14 /* BaseRoouter.swift in Sources */,
 				7F49D2AB271C56C10068EC14 /* Errors.swift in Sources */,
 				7F49D2A5271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
@@ -432,6 +447,7 @@
 			files = (
 				7F49D2AC271C56C10068EC14 /* Errors.swift in Sources */,
 				7F49D2A6271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
+				7F49D2D2271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */,
 				7F49D2BA271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F49D2CD271C65C90068EC14 /* HomeStation.swift in Sources */,
 				7F49D2B0271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
