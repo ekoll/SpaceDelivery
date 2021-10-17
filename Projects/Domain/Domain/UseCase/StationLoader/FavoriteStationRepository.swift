@@ -6,8 +6,8 @@
 //
 
 public protocol FavoriteStationRepository {
-    func loadStations(completion: QueryCompletion<[FavoriteStation]>)
-    func append(station: FavoriteStation, completion: CommandCompletion)
-    func remove(station: FavoriteStation, completion: CommandCompletion)
+    func loadStations(completion: @escaping QueryCompletion<[FavoriteStation]>)
+    func append(station: FavoriteStation, completion: @escaping CommandCompletion)
+    func remove(station: FavoriteStation, completion: @escaping CommandCompletion)
     func update(station: FavoriteStation)
 }

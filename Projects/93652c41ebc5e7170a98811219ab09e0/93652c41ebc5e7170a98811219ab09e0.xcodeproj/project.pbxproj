@@ -75,6 +75,7 @@
 		7F49D2F7271C8DED0068EC14 /* SpaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2F6271C8DED0068EC14 /* SpaceView.xib */; };
 		7F49D2F8271C8DED0068EC14 /* SpaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2F6271C8DED0068EC14 /* SpaceView.xib */; };
 		7F49D2F9271C8DED0068EC14 /* SpaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2F6271C8DED0068EC14 /* SpaceView.xib */; };
+		7F49D302271CACE30068EC14 /* FileFavoriteStationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D301271CACE30068EC14 /* FileFavoriteStationRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,7 @@
 		7F49D2EE271C88FB0068EC14 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 		7F49D2F2271C8D8B0068EC14 /* SpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceView.swift; sourceTree = "<group>"; };
 		7F49D2F6271C8DED0068EC14 /* SpaceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpaceView.xib; sourceTree = "<group>"; };
+		7F49D301271CACE30068EC14 /* FileFavoriteStationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileFavoriteStationRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 			children = (
 				7F49D2A3271C521F0068EC14 /* ApiStationRepository.swift */,
 				7F49D2AD271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift */,
+				7F49D301271CACE30068EC14 /* FileFavoriteStationRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				7F49D2D0271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */,
 				7F49D2B8271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F49D2CB271C65C90068EC14 /* HomeStation.swift in Sources */,
+				7F49D302271CACE30068EC14 /* FileFavoriteStationRepository.swift in Sources */,
 				7F49D2D4271C6C7B0068EC14 /* ShipBuildView.swift in Sources */,
 				7F49D2AE271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
 				7F49D2C2271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,

@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var baseContainer: DependencyContainer {
         let container = DependencyContainer()
-        container.append(type: FavoriteStationRepository.self) { _ in InMemoryFavoriteStationRepository() }
+        container.append(type: FavoriteStationRepository.self) { _ in FileFavoriteStationRepository(fileName: "favorites.json", responseQueue: .main) }
         container.append(type: StationRepository.self) { _ in ApiStationRepository() }
         container.append(type: AppLoadRouter.self) { cont in LoadingViewRouter(container: cont) }
         container.append(type: LoadStationUseCase.self) { cont in
