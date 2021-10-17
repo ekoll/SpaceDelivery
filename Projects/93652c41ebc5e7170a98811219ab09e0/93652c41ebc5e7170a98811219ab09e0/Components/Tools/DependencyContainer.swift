@@ -21,6 +21,7 @@ class DependencyContainer {
     
     func resolve<T>() -> T {
         guard let object = container[String(describing: T.self)]?(self) else {
+            print("Could not find:", String(describing: T.self), "looking to parent")
             return parent!.resolve()
         }
         
