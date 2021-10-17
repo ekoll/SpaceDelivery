@@ -9,8 +9,8 @@ import UIKit
 import Presentation
 
 protocol StationCellDelegate: AnyObject {
-    func stationCell(operationFor viewModel: StationViewModel)
-    func stationCell(toogleFavorite viewModel: StationViewModel)
+    func stationCell(operationFor station: StationViewModel)
+    func stationCell(toogleFavorite station: StationViewModel)
 }
 
 class StationCell: UITableViewCell {

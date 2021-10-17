@@ -54,6 +54,7 @@ extension SpaceView: UITableViewDataSource {
         
         let station = viewModel.stations.data[indexPath.row]
         cell.set(viewModel: station)
+        cell.delegate = self
         
         return cell
     }
@@ -61,18 +62,28 @@ extension SpaceView: UITableViewDataSource {
 
 // MARK: - station cell delegate
 extension SpaceView: StationCellDelegate {
-    func stationCell(operationFor viewModel: StationViewModel) {
-        
+    func stationCell(operationFor station: StationViewModel) {
+        viewModel.doOperation(for: station)
     }
     
-    func stationCell(toogleFavorite viewModel: StationViewModel) {
-        
+    func stationCell(toogleFavorite station: StationViewModel) {
+        viewModel.toggleFavourite(of: station)
     }
 }
 
 // MARK: - renderer
 extension SpaceView: Renderer {
     func updateUI() {
+        stockLabel.text = viewModel.stockText
+        ustLabel.text = viewModel.universalSpaceTimeText
+        durabilityTimeLabel.text = viewModel.durabilityTimeText
         
+        shipNameLabel.text = viewModel.shipname
+        healthLabel.text = viewModel.healthText
+        healthProgress.progress = viewModel.healthRatio
+        remainingSecondsLabel.text = viewModel.remainingSecondsToDamageText
+        
+        stationLabel.text = viewModel.currentStationName
+        tableView.reloadData()
     }
 }

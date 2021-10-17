@@ -42,12 +42,24 @@ extension SpaceViewModel {
         Int64(spaceship.durabilityTime * 1000).description
     }
     
+    public var shipname: String {
+        spaceship.name
+    }
+    
     public var healthText: String {
         "\(spaceship.currentHealth)/\(spaceship.maxHealth)"
     }
     
-    public var healthRation: Double {
-        Double(spaceship.currentHealth) / Double(spaceship.maxHealth)
+    public var healthRatio: Float {
+        Float(spaceship.currentHealth) / Float(spaceship.maxHealth)
+    }
+
+    public var remainingSecondsToDamageText: String {
+        Int64(spaceship.remainintTimeToDamage).description
+    }
+    
+    public var currentStationName: String {
+        spaceship.stationName
     }
 }
 
