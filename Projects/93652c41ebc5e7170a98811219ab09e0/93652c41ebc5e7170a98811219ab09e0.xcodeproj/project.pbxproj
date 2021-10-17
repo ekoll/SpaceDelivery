@@ -31,6 +31,9 @@
 		7F49D2B3271C59320068EC14 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2B2271C59320068EC14 /* DependencyContainer.swift */; };
 		7F49D2B4271C59320068EC14 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2B2271C59320068EC14 /* DependencyContainer.swift */; };
 		7F49D2B5271C59320068EC14 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2B2271C59320068EC14 /* DependencyContainer.swift */; };
+		7F49D2B8271C5A620068EC14 /* XibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2B7271C5A620068EC14 /* XibViewController.swift */; };
+		7F49D2B9271C5A620068EC14 /* XibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2B7271C5A620068EC14 /* XibViewController.swift */; };
+		7F49D2BA271C5A620068EC14 /* XibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2B7271C5A620068EC14 /* XibViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,7 @@
 		7F49D2A9271C56C10068EC14 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		7F49D2AD271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFavoriteStationRepository.swift; sourceTree = "<group>"; };
 		7F49D2B2271C59320068EC14 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		7F49D2B7271C5A620068EC14 /* XibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 		7F49D2A7271C56A70068EC14 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7F49D2B6271C5A4D0068EC14 /* UI */,
 				7F49D2B1271C59220068EC14 /* Tools */,
 				7F49D2A8271C56AF0068EC14 /* Structures */,
 			);
@@ -207,6 +212,14 @@
 				7F49D2B2271C59320068EC14 /* DependencyContainer.swift */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		7F49D2B6271C5A4D0068EC14 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7F49D2B7271C5A620068EC14 /* XibViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +356,7 @@
 			files = (
 				7F49D2AA271C56C10068EC14 /* Errors.swift in Sources */,
 				7F49D2A4271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
+				7F49D2B8271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F49D2AE271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
 				7F242C7B271C4ABF006803D2 /* ViewController.swift in Sources */,
 				7F49D2B3271C59320068EC14 /* DependencyContainer.swift in Sources */,
@@ -356,6 +370,7 @@
 			files = (
 				7F49D2AF271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
 				7F49D2B4271C59320068EC14 /* DependencyContainer.swift in Sources */,
+				7F49D2B9271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F242C8E271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0Tests.swift in Sources */,
 				7F49D2AB271C56C10068EC14 /* Errors.swift in Sources */,
 				7F49D2A5271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
@@ -368,6 +383,7 @@
 			files = (
 				7F49D2AC271C56C10068EC14 /* Errors.swift in Sources */,
 				7F49D2A6271C521F0068EC14 /* ApiStationRepository.swift in Sources */,
+				7F49D2BA271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F49D2B0271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
 				7F242C98271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITests.swift in Sources */,
 				7F49D2B5271C59320068EC14 /* DependencyContainer.swift in Sources */,
