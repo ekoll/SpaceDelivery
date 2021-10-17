@@ -48,6 +48,12 @@
 		7F49D2D0271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2CF271C67850068EC14 /* ShipBuildViewRouter.swift */; };
 		7F49D2D1271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2CF271C67850068EC14 /* ShipBuildViewRouter.swift */; };
 		7F49D2D2271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2CF271C67850068EC14 /* ShipBuildViewRouter.swift */; };
+		7F49D2D4271C6C7B0068EC14 /* ShipBuildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2D3271C6C7B0068EC14 /* ShipBuildView.swift */; };
+		7F49D2D5271C6C7B0068EC14 /* ShipBuildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2D3271C6C7B0068EC14 /* ShipBuildView.swift */; };
+		7F49D2D6271C6C7B0068EC14 /* ShipBuildView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49D2D3271C6C7B0068EC14 /* ShipBuildView.swift */; };
+		7F49D2D8271C6C940068EC14 /* ShipBuildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2D7271C6C940068EC14 /* ShipBuildView.xib */; };
+		7F49D2D9271C6C950068EC14 /* ShipBuildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2D7271C6C940068EC14 /* ShipBuildView.xib */; };
+		7F49D2DA271C6C950068EC14 /* ShipBuildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F49D2D7271C6C940068EC14 /* ShipBuildView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +112,8 @@
 		7F49D2C5271C62100068EC14 /* BaseRoouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRoouter.swift; sourceTree = "<group>"; };
 		7F49D2CA271C65C90068EC14 /* HomeStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStation.swift; sourceTree = "<group>"; };
 		7F49D2CF271C67850068EC14 /* ShipBuildViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipBuildViewRouter.swift; sourceTree = "<group>"; };
+		7F49D2D3271C6C7B0068EC14 /* ShipBuildView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipBuildView.swift; sourceTree = "<group>"; };
+		7F49D2D7271C6C940068EC14 /* ShipBuildView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShipBuildView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				7F49D2CF271C67850068EC14 /* ShipBuildViewRouter.swift */,
+				7F49D2D7271C6C940068EC14 /* ShipBuildView.xib */,
+				7F49D2D3271C6C7B0068EC14 /* ShipBuildView.swift */,
 			);
 			path = ShipBuild;
 			sourceTree = "<group>";
@@ -382,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F242C83271C4AC1006803D2 /* LaunchScreen.storyboard in Resources */,
+				7F49D2D8271C6C940068EC14 /* ShipBuildView.xib in Resources */,
 				7F49D2BE271C5B250068EC14 /* LoadingView.xib in Resources */,
 				7F242C80271C4AC1006803D2 /* Assets.xcassets in Resources */,
 			);
@@ -392,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F49D2BF271C5B250068EC14 /* LoadingView.xib in Resources */,
+				7F49D2D9271C6C950068EC14 /* ShipBuildView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F49D2C0271C5B250068EC14 /* LoadingView.xib in Resources */,
+				7F49D2DA271C6C950068EC14 /* ShipBuildView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +428,7 @@
 				7F49D2D0271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */,
 				7F49D2B8271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F49D2CB271C65C90068EC14 /* HomeStation.swift in Sources */,
+				7F49D2D4271C6C7B0068EC14 /* ShipBuildView.swift in Sources */,
 				7F49D2AE271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
 				7F49D2C2271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,
 				7F242C7B271C4ABF006803D2 /* LoadingView.swift in Sources */,
@@ -430,6 +444,7 @@
 			files = (
 				7F49D2CC271C65C90068EC14 /* HomeStation.swift in Sources */,
 				7F49D2AF271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
+				7F49D2D5271C6C7B0068EC14 /* ShipBuildView.swift in Sources */,
 				7F49D2B4271C59320068EC14 /* DependencyContainer.swift in Sources */,
 				7F49D2C3271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,
 				7F49D2B9271C5A620068EC14 /* XibViewController.swift in Sources */,
@@ -450,6 +465,7 @@
 				7F49D2D2271C67850068EC14 /* ShipBuildViewRouter.swift in Sources */,
 				7F49D2BA271C5A620068EC14 /* XibViewController.swift in Sources */,
 				7F49D2CD271C65C90068EC14 /* HomeStation.swift in Sources */,
+				7F49D2D6271C6C7B0068EC14 /* ShipBuildView.swift in Sources */,
 				7F49D2B0271C57D90068EC14 /* InMemoryFavoriteStationRepository.swift in Sources */,
 				7F49D2C4271C60FB0068EC14 /* LoadingViewRouter.swift in Sources */,
 				7F242C98271C4AC1006803D2 /* _3652c41ebc5e7170a98811219ab09e0UITests.swift in Sources */,
