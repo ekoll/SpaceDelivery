@@ -9,19 +9,21 @@ import Domain
 
 public class SpaceViewModel {
     private var spaceship: Spaceship
-    private let stations: [StationViewModel]
     private let shipLocation: ShipLocation
     private let spaceUsecase: SpaceUseCase
     private let favoriteUsecase: FavoriteStationUseCase
     private weak var view: Renderer?
     
+    public let stations: FilterableStations
+    
     public init(spaceship: Spaceship, shipLocation: ShipLocation, stations: [SpaceStation], spaceUsecase: SpaceUseCase, favoriteUsecase: FavoriteStationUseCase, view: Renderer? = nil) {
         self.spaceship = spaceship
         self.shipLocation = shipLocation
-        self.stations = stations.map { .init(station: $0, shipLocation: shipLocation) }
         self.spaceUsecase = spaceUsecase
         self.favoriteUsecase = favoriteUsecase
         self.view = view
+        
+        self.stations = FilterableStations(stations: stations.map { .init(station: $0, shipLocation: shipLocation) })
     }
 }
 
@@ -46,17 +48,12 @@ extension SpaceViewModel {
     public var healthRation: Double {
         Double(spaceship.currentHealth) / Double(spaceship.maxHealth)
     }
- 
-    public var stationList: [StationViewModel] { stations }
 }
 
 
 // MARK: - funcs
 extension SpaceViewModel {
-    public func operationForStation(at index: Int) {
-        guard stations.count > index else { return }
-        let station = stations[index]
-        
+    public func doOperation(for station: StationViewModel) {        
         do {
             switch station.operation {
             case .travel:

@@ -32,6 +32,8 @@
 		7F5D7049271C31CA00B8597B /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D7047271C31CA00B8597B /* StationViewModel.swift */; };
 		7F5D704B271C32DA00B8597B /* ShipLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D704A271C32DA00B8597B /* ShipLocation.swift */; };
 		7F5D704C271C32DA00B8597B /* ShipLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D704A271C32DA00B8597B /* ShipLocation.swift */; };
+		7F5D704E271C41CD00B8597B /* FilterableStations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D704D271C41CD00B8597B /* FilterableStations.swift */; };
+		7F5D704F271C41CD00B8597B /* FilterableStations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D704D271C41CD00B8597B /* FilterableStations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,7 @@
 		7F5D7044271C2FAA00B8597B /* SpaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewModel.swift; sourceTree = "<group>"; };
 		7F5D7047271C31CA00B8597B /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
 		7F5D704A271C32DA00B8597B /* ShipLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipLocation.swift; sourceTree = "<group>"; };
+		7F5D704D271C41CD00B8597B /* FilterableStations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterableStations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,7 @@
 				7F5D7044271C2FAA00B8597B /* SpaceViewModel.swift */,
 				7F5D7047271C31CA00B8597B /* StationViewModel.swift */,
 				7F5D704A271C32DA00B8597B /* ShipLocation.swift */,
+				7F5D704D271C41CD00B8597B /* FilterableStations.swift */,
 			);
 			path = SpaceViewModel;
 			sourceTree = "<group>";
@@ -325,6 +329,7 @@
 				7F5D704B271C32DA00B8597B /* ShipLocation.swift in Sources */,
 				7F5D703E271C211D00B8597B /* ShipBuildRouter.swift in Sources */,
 				7F5D7029271C193000B8597B /* AppLoadViewModel.swift in Sources */,
+				7F5D704E271C41CD00B8597B /* FilterableStations.swift in Sources */,
 				7F5D7004271C113B00B8597B /* Presentation.docc in Sources */,
 				7F5D702D271C199B00B8597B /* AppLoadRouter.swift in Sources */,
 				7F5D7048271C31CA00B8597B /* StationViewModel.swift in Sources */,
@@ -345,6 +350,7 @@
 				7F5D703F271C211D00B8597B /* ShipBuildRouter.swift in Sources */,
 				7F5D7049271C31CA00B8597B /* StationViewModel.swift in Sources */,
 				7F5D7046271C2FAA00B8597B /* SpaceViewModel.swift in Sources */,
+				7F5D704F271C41CD00B8597B /* FilterableStations.swift in Sources */,
 				7F5D700F271C113B00B8597B /* AppLoadViewModelTests.swift in Sources */,
 				7F5D702E271C199B00B8597B /* AppLoadRouter.swift in Sources */,
 			);
