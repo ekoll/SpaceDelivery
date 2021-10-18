@@ -190,7 +190,7 @@
                                 <constraint firstAttribute="height" constant="1" id="xY3-es-EJf"/>
                             </constraints>
                         </view>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Lm-P1-MBn">
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Lm-P1-MBn">
                             <rect key="frame" x="0.0" y="189.5" width="414" height="650.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <inset key="separatorInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>

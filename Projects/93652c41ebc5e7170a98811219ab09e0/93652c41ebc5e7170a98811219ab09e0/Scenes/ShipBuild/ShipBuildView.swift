@@ -69,10 +69,6 @@ class ShipBuildView: XibViewController {
         viewModel.update(name: text)
         viewModel.startGame()
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
 }
 
 // MARK: - renderer
