@@ -8,9 +8,9 @@
 import UIKit
 import Foundation
 
-open class XibViewController: UIViewController {
+class XibViewController: UIViewController {
     
-    public init(nibName: String? = nil) {
+    init(nibName: String? = nil) {
         super.init(
             nibName: nibName ?? String(describing: Self.self),
             bundle: .main
@@ -18,7 +18,11 @@ open class XibViewController: UIViewController {
     }
     
     @available(*, unavailable)
-    public required init?(coder: NSCoder) {
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }
